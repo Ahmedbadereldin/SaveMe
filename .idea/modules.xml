@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AndroidLockPattern/AndroidLockPattern.iml" filepath="$PROJECT_DIR$/.idea/modules/AndroidLockPattern/AndroidLockPattern.iml" group="SaveMe/AndroidLockPattern" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CodeChimpAppRater/CodeChimpAppRater.iml" filepath="$PROJECT_DIR$/.idea/modules/CodeChimpAppRater/CodeChimpAppRater.iml" group="SaveMe/CodeChimpAppRater" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SaveMe.iml" filepath="$PROJECT_DIR$/.idea/modules/SaveMe.iml" group="SaveMe" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SaveMyPhone/SaveMyPhone.iml" filepath="$PROJECT_DIR$/.idea/modules/SaveMyPhone/SaveMyPhone.iml" group="SaveMe/SaveMyPhone" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ServeMeFramework/ServeMeFramework.iml" filepath="$PROJECT_DIR$/.idea/modules/ServeMeFramework/ServeMeFramework.iml" group="SaveMe/ServeMeFramework" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TwoWayView/TwoWayView.iml" filepath="$PROJECT_DIR$/.idea/modules/TwoWayView/TwoWayView.iml" group="SaveMe/TwoWayView" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AndroidLockPattern/androidlockpattern/androidlockpattern.iml" filepath="$PROJECT_DIR$/.idea/modules/AndroidLockPattern/androidlockpattern/androidlockpattern.iml" group="SaveMe/AndroidLockPattern/androidlockpattern" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CodeChimpAppRater/apprater/apprater.iml" filepath="$PROJECT_DIR$/.idea/modules/CodeChimpAppRater/apprater/apprater.iml" group="SaveMe/CodeChimpAppRater/apprater" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ServeMeFramework/servemeframework/servemeframework.iml" filepath="$PROJECT_DIR$/.idea/modules/ServeMeFramework/servemeframework/servemeframework.iml" group="SaveMe/ServeMeFramework/servemeframework" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TwoWayView/twowayview/twowayview.iml" filepath="$PROJECT_DIR$/.idea/modules/TwoWayView/twowayview/twowayview.iml" group="SaveMe/TwoWayView/twowayview" />
+    </modules>
+  </component>
+</project>

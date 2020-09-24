@@ -15,11 +15,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import com.google.analytics.tracking.android.EasyTracker;
-import com.google.analytics.tracking.android.MapBuilder;
-import com.google.analytics.tracking.android.Tracker;
 import com.serveme.savemyphone.R;
-import com.serveme.savemyphone.view.utils.AnalyticsExceptionParser;
 import com.serveme.savemyphone.view.utils.BackgroundUtility;
 
 public class StanderListAdapter extends BaseAdapter {
@@ -76,10 +72,10 @@ public class StanderListAdapter extends BaseAdapter {
 		try {
 			assets = context.getAssets().list("background");
 		} catch (IOException e) {
-			Tracker tracker = EasyTracker.getInstance(context);
-			tracker.send(MapBuilder.createException(
-					new AnalyticsExceptionParser().getDescription(Thread
-							.currentThread().toString(), e), false).build());
+//			Tracker tracker = EasyTracker.getInstance(context);
+//			tracker.send(MapBuilder.createException(
+//					new AnalyticsExceptionParser().getDescription(Thread
+//							.currentThread().toString(), e), false).build());
 		}
 	}
 

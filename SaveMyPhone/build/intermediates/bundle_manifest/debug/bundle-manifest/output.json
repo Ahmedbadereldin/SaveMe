@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "applicationId": "com.serveme.savemyphone",
+  "variantType": "BASE_APK",
+  "elements": [
+    {
+      "outputType": {
+        "type": "BUNDLE_MANIFEST"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": 30,
+        "outputFile": "SaveMyPhone-debug.apk",
+        "fullName": "debug",
+        "baseName": "debug",
+        "dirName": ""
+      },
+      "path": "AndroidManifest.xml",
+      "properties": {
+        "packageId": "com.serveme.savemyphone",
+        "split": "",
+        "minSdkVersion": "19"
+      }
+    }
+  ]
+}

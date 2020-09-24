@@ -2,9 +2,6 @@ package com.serveme.savemyphone.view.utils;
 
 import android.content.Context;
 
-import com.google.analytics.tracking.android.EasyTracker;
-import com.google.analytics.tracking.android.Log;
-import com.google.analytics.tracking.android.MapBuilder;
 import com.google.android.gms.ads.AdListener;
 
 public class AdMobListener extends AdListener {
@@ -23,16 +20,16 @@ public class AdMobListener extends AdListener {
 
 	@Override
 	public void onAdLeftApplication() {
-		EasyTracker.getInstance(context).send(
-				MapBuilder.createEvent("ads", "ads", "leave", Long.valueOf(1))
-						.build());
+//		EasyTracker.getInstance(context).send(
+//				MapBuilder.createEvent("ads", "ads", "leave", Long.valueOf(1))
+//						.build());
 	}
 
 	@Override
 	public void onAdLoaded() {
-		EasyTracker.getInstance(context).send(
-				MapBuilder.createEvent("ads", "ads", "recive", Long.valueOf(1))
-						.build());
+//		EasyTracker.getInstance(context).send(
+//				MapBuilder.createEvent("ads", "ads", "recive", Long.valueOf(1))
+//						.build());
 	}
 
 }

@@ -7,18 +7,20 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.serveme.savemyphone.R;
 import com.serveme.savemyphone.receivers.AdminReciver;
 import com.serveme.savemyphone.util.MyTracker;
 import com.serveme.savemyphone.view.utils.ActivitiesController;
 
-public class AdminRequest extends ActionBarActivity {
+public class AdminRequest extends AppCompatActivity {
 
 	private final int REQUEST_ENABLE = 1;
 

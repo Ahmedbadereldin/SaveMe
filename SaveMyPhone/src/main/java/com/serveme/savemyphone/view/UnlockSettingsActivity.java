@@ -8,7 +8,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -18,17 +17,15 @@ import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.serveme.savemyphone.R;
-import com.serveme.savemyphone.R.id;
-import com.serveme.savemyphone.R.layout;
-import com.serveme.savemyphone.R.string;
 import com.serveme.savemyphone.control.GridAdapter;
 import com.serveme.savemyphone.model.DBOperations;
 import com.serveme.savemyphone.model.Launcher;
 
-public class UnlockSettingsActivity extends ActionBarActivity {
+public class UnlockSettingsActivity extends AppCompatActivity {
 	private List<Launcher> appsinfolist;
 	private DBOperations db;
 	private GridAdapter ga;

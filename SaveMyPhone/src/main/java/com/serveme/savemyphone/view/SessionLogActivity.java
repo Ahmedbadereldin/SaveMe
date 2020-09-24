@@ -4,15 +4,13 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-import com.google.analytics.tracking.android.EasyTracker;
-import com.google.analytics.tracking.android.MapBuilder;
-import com.google.analytics.tracking.android.Tracker;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.serveme.savemyphone.R;
@@ -23,7 +21,7 @@ import com.serveme.savemyphone.model.DB_KEYS;
 import com.serveme.savemyphone.view.utils.AdMobListener;
 import com.serveme.savemyphone.view.utils.AnalyticsExceptionParser;
 
-public class SessionLogActivity extends ActionBarActivity {
+public class SessionLogActivity extends AppCompatActivity {
 
 	private SQLiteDatabase db;
 	private Cursor cursor;
@@ -52,22 +50,22 @@ public class SessionLogActivity extends ActionBarActivity {
 			try {
 				cursor.close();
 			} catch (Exception exception) {
-				Tracker tracker = EasyTracker.getInstance(this);
-				tracker.send(MapBuilder.createException(
-						new AnalyticsExceptionParser().getDescription(Thread
-								.currentThread().toString(), exception), false)
-						.build());
+//				Tracker tracker = EasyTracker.getInstance(this);
+//				tracker.send(MapBuilder.createException(
+//						new AnalyticsExceptionParser().getDescription(Thread
+//								.currentThread().toString(), exception), false)
+//						.build());
 			}
 		}
 		if (db != null) {
 			try {
 				db.close();
 			} catch (Exception exception) {
-				Tracker tracker = EasyTracker.getInstance(this);
-				tracker.send(MapBuilder.createException(
-						new AnalyticsExceptionParser().getDescription(Thread
-								.currentThread().toString(), exception), false)
-						.build());
+//				Tracker tracker = EasyTracker.getInstance(this);
+//				tracker.send(MapBuilder.createException(
+//						new AnalyticsExceptionParser().getDescription(Thread
+//								.currentThread().toString(), exception), false)
+//						.build());
 			}
 		}
 		super.onStop();

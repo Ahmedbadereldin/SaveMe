@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/D:/AndroidStudioProjects/Libraries/TwoWayView/sample/src/main/res/values-land/styles.xml -->
+    <eat-comment/>
+    <style name="TwoWayView">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:scrollbars">horizontal</item>
+    </style>
+</resources>

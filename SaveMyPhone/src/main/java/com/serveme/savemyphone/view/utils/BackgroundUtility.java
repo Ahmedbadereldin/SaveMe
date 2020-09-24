@@ -3,10 +3,6 @@ package com.serveme.savemyphone.view.utils;
 import java.io.IOException;
 import java.io.InputStream;
 
-import com.google.analytics.tracking.android.EasyTracker;
-import com.google.analytics.tracking.android.MapBuilder;
-import com.google.analytics.tracking.android.Tracker;
-
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
@@ -26,10 +22,11 @@ public class BackgroundUtility {
 			istr = assetManager.open(filePath);
 			bitmap = BitmapFactory.decodeStream(istr);
 		} catch (IOException e) {
-			Tracker tracker = EasyTracker.getInstance(context);
-			tracker.send(MapBuilder.createException(
-					new AnalyticsExceptionParser().getDescription(Thread
-							.currentThread().toString(), e), false).build());
+			e.printStackTrace();
+//			Tracker tracker = EasyTracker.getInstance(context);
+//			tracker.send(MapBuilder.createException(
+//					new AnalyticsExceptionParser().getDescription(Thread
+//							.currentThread().toString(), e), false).build());
 		}
 		BitmapDrawable bitmapDrawable = new BitmapDrawable(
 				context.getResources(), bitmap);
@@ -50,10 +47,12 @@ public class BackgroundUtility {
 			bitmap = decodeSampledBitmapFrotmStream(context, istr, reqWidth,
 					reqHeight);
 		} catch (IOException e) {
-			Tracker tracker = EasyTracker.getInstance(context);
-			tracker.send(MapBuilder.createException(
-					new AnalyticsExceptionParser().getDescription(Thread
-							.currentThread().toString(), e), false).build());
+			e.printStackTrace();
+
+//			Tracker tracker = EasyTracker.getInstance(context);
+//			tracker.send(MapBuilder.createException(
+//					new AnalyticsExceptionParser().getDescription(Thread
+//							.currentThread().toString(), e), false).build());
 		}
 		BitmapDrawable bitmapDrawable = new BitmapDrawable(
 				context.getResources(), bitmap);
@@ -96,10 +95,12 @@ public class BackgroundUtility {
 			if (inputStream.markSupported())
 				inputStream.reset();
 		} catch (IOException e) {
-			Tracker tracker = EasyTracker.getInstance(context);
-			tracker.send(MapBuilder.createException(
-					new AnalyticsExceptionParser().getDescription(Thread
-							.currentThread().toString(), e), false).build());
+			e.printStackTrace();
+
+//			Tracker tracker = EasyTracker.getInstance(context);
+//			tracker.send(MapBuilder.createException(
+//					new AnalyticsExceptionParser().getDescription(Thread
+//							.currentThread().toString(), e), false).build());
 		}
 		// Calculate inSampleSize
 		options.inSampleSize = calculateInSampleSize(options, reqWidth,

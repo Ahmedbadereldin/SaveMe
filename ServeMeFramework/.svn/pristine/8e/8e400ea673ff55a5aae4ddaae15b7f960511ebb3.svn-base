@@ -1,0 +1,6 @@
+<resources>
+
+    <string name="app_name">Analytics</string>
+    <string name="unresolved_market">You can not rate.Tha app download from Unresolved market.</string>
+    <string name="unexist_market">You Do not have google play</string>
+</resources>

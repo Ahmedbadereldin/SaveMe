@@ -1,0 +1,15 @@
+apply plugin: 'android'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':twowayview')
+    implementation 'com.android.support:support-v4:19.0.+'
+}
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion '21.1.1'
+}

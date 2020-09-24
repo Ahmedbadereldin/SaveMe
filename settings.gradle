@@ -1,1 +1,1 @@
-include ':SaveMyPhone', '..:Libraries:ServeMeFramework:servemeframework', '..:Libraries:AndroidLockPattern:androidlockpattern', '..:Libraries:CodeChimpAppRater:apprater', '..:Libraries:TwoWayView:twowayview'
+include ':SaveMyPhone', ':ServeMeFramework:servemeframework', ':AndroidLockPattern:androidlockpattern', ':CodeChimpAppRater:apprater', ':TwoWayView:twowayview'

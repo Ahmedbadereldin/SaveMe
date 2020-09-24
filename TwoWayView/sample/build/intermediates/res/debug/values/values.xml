@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/D:/AndroidStudioProjects/Libraries/TwoWayView/sample/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="dark_gray">#cccccc</color>
+    <color name="light_gray">#eeeeee</color>
+    <color name="medium_gray">#dddddd</color>
+    <declare-styleable name="TwoWayView"><attr name="android:orientation"/><attr name="android:choiceMode"/><attr name="android:listSelector"/><attr name="android:drawSelectorOnTop"/></declare-styleable>
+    <!-- From: file:/D:/AndroidStudioProjects/Libraries/TwoWayView/sample/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">TwoWayView Sample</string>
+</resources>

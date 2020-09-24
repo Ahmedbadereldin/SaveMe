@@ -1,0 +1,94 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/c92e97746668c7a063abbdff8aa76fbb/jetified-play-services-cast-framework-12.0.1/res/values-land/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9",
+                        "startColumns": "0,0,0,0,0,0",
+                        "startOffsets": "183,264,344,414,483,578",
+                        "endColumns": "80,79,69,68,94,90",
+                        "endOffsets": "263,343,413,482,577,668"
+                    },
+                    "to": {
+                        "startLines": "6,7,8,9,10,11",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "325,410,494,568,641,740",
+                        "endColumns": "84,83,73,72,98,94",
+                        "endOffsets": "405,489,563,636,735,830"
+                    }
+                },
+                {
+                    "source": "/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/AndroidLockPattern/androidlockpattern/build/intermediates/packaged_res/debug/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "120",
+                        "endOffsets": "171"
+                    },
+                    "to": {
+                        "startLines": "15",
+                        "startColumns": "4",
+                        "startOffsets": "1063",
+                        "endColumns": "120",
+                        "endOffsets": "1179"
+                    }
+                },
+                {
+                    "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/bf96d2b5a86ecd602a621e7e96856420/appcompat-1.2.0/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    },
+                    "to": {
+                        "startLines": "3,4,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "116,186,257",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "181,252,320"
+                    }
+                },
+                {
+                    "source": "/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/res/values-land/dimens.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "92",
+                        "endColumns": "60",
+                        "endOffsets": "148"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "60",
+                        "endOffsets": "111"
+                    }
+                },
+                {
+                    "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/b0019831a1bd247a0185ae5af997f6a4/mediarouter-1.0.0-alpha5/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,130,208",
+                        "endColumns": "74,77,74",
+                        "endOffsets": "125,203,278"
+                    },
+                    "to": {
+                        "startLines": "12,13,14",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "835,910,988",
+                        "endColumns": "74,77,74",
+                        "endOffsets": "905,983,1058"
+                    }
+                }
+            ]
+        }
+    ]
+}

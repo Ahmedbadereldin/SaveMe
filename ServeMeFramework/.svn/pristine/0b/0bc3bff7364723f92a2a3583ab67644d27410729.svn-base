@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ServeMeFramework.iml" filepath="$PROJECT_DIR$/ServeMeFramework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ServeMeFramework.iml" filepath="$PROJECT_DIR$/ServeMeFramework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servemeframework/servemeframework.iml" filepath="$PROJECT_DIR$/servemeframework/servemeframework.iml" />
+    </modules>
+  </component>
+</project>
+

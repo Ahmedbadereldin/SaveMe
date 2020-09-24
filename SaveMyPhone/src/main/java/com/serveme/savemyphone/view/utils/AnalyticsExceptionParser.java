@@ -1,9 +1,10 @@
 package com.serveme.savemyphone.view.utils;
 
+import com.google.android.gms.analytics.ExceptionParser;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import com.google.analytics.tracking.android.ExceptionParser;
 
 public class AnalyticsExceptionParser implements ExceptionParser {
 

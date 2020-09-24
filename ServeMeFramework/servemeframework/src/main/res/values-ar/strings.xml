@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">الإحصائيات</string>
+    <string name="unresolved_market">لا يمكنك التقييم البرنامج تم تنزيله من سوق غير معرف</string>
+    <string name="unexist_market">ليس لديك سوق جوجل</string>
+
+</resources>

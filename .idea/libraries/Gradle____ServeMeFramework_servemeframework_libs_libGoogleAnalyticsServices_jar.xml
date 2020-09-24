@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./ServeMeFramework/servemeframework/libs/libGoogleAnalyticsServices.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ServeMeFramework/servemeframework/libs/libGoogleAnalyticsServices.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,692 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.serveme.savemyphone"
+4    android:installLocation="internalOnly"
+5    android:permission="android.permission.RECEIVE_BOOT_COMPLETED"
+6    android:versionCode="30" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="19"
+9-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml
+10        android:targetSdkVersion="30" />
+10-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml
+11
+12    <!-- permissions -->
+13    <uses-permission android:name="android.permission.GET_TASKS" />
+13-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:10:5-68
+13-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:10:22-65
+14    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+14-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:11:5-81
+14-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:11:22-78
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:12:5-67
+15-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:12:22-64
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:13:5-79
+16-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:13:22-76
+17    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+17-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:14:5-78
+17-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:14:22-75
+18    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+18-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:15:5-71
+18-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:15:22-68
+19    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+19-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:16:2-81
+19-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:16:19-78
+20    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+21    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+22    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Optional permission for Analytics to run. -->
+23    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create GCM registration tokens -->
+23-->[com.google.android.gms:play-services-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e2fc77f354c5bffe6d731e70ff4da88e/jetified-play-services-analytics-12.0.1/AndroidManifest.xml:27:5-68
+23-->[com.google.android.gms:play-services-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e2fc77f354c5bffe6d731e70ff4da88e/jetified-play-services-analytics-12.0.1/AndroidManifest.xml:27:22-65
+24    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+24-->[com.google.android.gms:play-services-gcm:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/ff874471daf51e0f448e42cce65e7bb1/jetified-play-services-gcm-12.0.1/AndroidManifest.xml:23:5-82
+24-->[com.google.android.gms:play-services-gcm:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/ff874471daf51e0f448e42cce65e7bb1/jetified-play-services-gcm-12.0.1/AndroidManifest.xml:23:22-79
+25
+26    <uses-feature
+26-->[com.google.android.gms:play-services-maps:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/aa32c1e6e7460bb06af178b9f7014df0/jetified-play-services-maps-12.0.1/AndroidManifest.xml:26:5-28:35
+27        android:glEsVersion="0x00020000"
+27-->[com.google.android.gms:play-services-maps:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/aa32c1e6e7460bb06af178b9f7014df0/jetified-play-services-maps-12.0.1/AndroidManifest.xml:27:9-41
+28        android:required="true" />
+28-->[com.google.android.gms:play-services-maps:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/aa32c1e6e7460bb06af178b9f7014df0/jetified-play-services-maps-12.0.1/AndroidManifest.xml:28:9-32
+29
+30    <permission
+30-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:28:5-30:47
+31        android:name="com.serveme.savemyphone.permission.C2D_MESSAGE"
+31-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:29:9-63
+32        android:protectionLevel="signature" />
+32-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:30:9-44
+33
+34    <uses-permission android:name="com.serveme.savemyphone.permission.C2D_MESSAGE" />
+34-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:32:5-79
+34-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:32:22-76
+35
+36    <application
+36-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:18:5-212:19
+37        android:name="androidx.multidex.MultiDexApplication"
+38        android:allowBackup="true"
+38-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:19:9-35
+39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+39-->[androidx.core:core:1.3.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/429fb715fcc7711d4ab133e350b6f531/core-1.3.0/AndroidManifest.xml:24:18-86
+40        android:debuggable="true"
+41        android:icon="@drawable/ic_launcher"
+41-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:20:9-45
+42        android:label="@string/app_name"
+42-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:21:9-41
+43        android:manageSpaceActivity="com.serveme.savemyphone.view.ManageSpaceActivity"
+43-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:22:9-87
+44        android:supportsRtl="true"
+44-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:23:9-35
+45        android:testOnly="true"
+46        android:theme="@style/AppTheme" >
+46-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:24:9-40
+47        <meta-data
+47-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:26:9-27:68
+48            android:name="com.google.android.gms.version"
+48-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:26:20-65
+49            android:value="@integer/google_play_services_version" />
+49-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:27:13-66
+50
+51        <!-- services -->
+52        <service
+52-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:30:9-32:38
+53            android:name="com.serveme.savemyphone.service.AppsMonitor"
+53-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:31:13-71
+54            android:enabled="true" />
+54-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:32:13-35
+55        <service
+55-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:33:9-40:19
+56            android:name="com.serveme.savemyphone.control.NotificationObserver"
+56-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:34:13-80
+57            android:label="@string/app_name"
+57-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:35:13-45
+58            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+58-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:36:13-87
+59            <intent-filter>
+59-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:37:13-39:29
+60                <action android:name="android.service.notification.NotificationListenerService" />
+60-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:38:17-99
+60-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:38:25-96
+61            </intent-filter>
+62        </service>
+63
+64        <!-- receivers -->
+65        <receiver android:name="com.serveme.savemyphone.receivers.BootReceiver" >
+65-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:43:9-48:20
+65-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:43:19-80
+66            <intent-filter>
+66-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:44:13-47:29
+67                <action android:name="android.intent.action.BOOT_COMPLETED" />
+67-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:45:17-79
+67-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:45:25-76
+68                <!-- <action android:name="android.intent.action.USER_PRESENT" /> -->
+69            </intent-filter>
+70        </receiver>
+71        <receiver
+71-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:49:9-60:20
+72            android:name="com.serveme.savemyphone.receivers.AdminReciver"
+72-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:50:13-74
+73            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+73-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:51:13-70
+74            <meta-data
+74-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:52:13-54:61
+75                android:name="android.app.device_admin"
+75-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:53:17-56
+76                android:resource="@xml/required_policies" />
+76-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:54:17-58
+77
+78            <intent-filter>
+78-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:56:13-59:29
+79                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+79-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:57:17-82
+79-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:57:25-79
+80                <action android:name="android.app.action.DEVICE_ADMIN_DISABLED" />
+80-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:58:17-83
+80-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:58:25-80
+81            </intent-filter>
+82        </receiver>
+83        <receiver android:name="com.serveme.savemyphone.receivers.RemovePackageReceiver" >
+83-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:61:9-72:20
+83-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:61:19-89
+84            <intent-filter>
+84-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:62:13-66:29
+85                <action android:name="android.intent.action.PACKAGE_FULLY_REMOVED" />
+85-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:63:17-86
+85-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:63:25-83
+86
+87                <data android:scheme="package" />
+87-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:65:17-50
+87-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:65:23-47
+88            </intent-filter>
+89            <intent-filter>
+89-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:67:13-71:29
+90                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+90-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:68:17-80
+90-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:68:25-77
+91
+92                <data android:scheme="package" />
+92-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:65:17-50
+92-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:65:23-47
+93            </intent-filter>
+94        </receiver>
+95        <receiver android:name="com.serveme.savemyphone.receivers.UpdatePackageReceiver" >
+95-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:73:9-80:20
+95-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:73:19-89
+96            <intent-filter>
+96-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:74:13-79:29
+97                <action android:name="android.intent.action.PACKAGE_CHANGED" />
+97-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:75:17-80
+97-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:75:25-77
+98                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+98-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:76:17-81
+98-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:76:25-78
+99
+100                <data android:scheme="package" />
+100-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:65:17-50
+100-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:65:23-47
+101            </intent-filter>
+102        </receiver>
+103        <receiver android:name="com.serveme.savemyphone.receivers.SDCardReceiver" >
+103-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:81:9-91:20
+103-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:81:19-82
+104            <intent-filter>
+104-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:82:13-90:29
+105                <action android:name="android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE" />
+105-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:83:17-96
+105-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:83:25-93
+106                <action android:name="android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE" />
+106-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:84:17-98
+106-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:84:25-95
+107                <action android:name="android.intent.ACTION_MEDIA_BAD_REMOVAL" />
+107-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:85:17-82
+107-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:85:25-79
+108                <action android:name="android.intent.action.MEDIA_REMOVED" />
+108-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:86:17-78
+108-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:86:25-75
+109                <action android:name="android.intent.action.ACTION_MEDIA_SHARED" />
+109-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:87:17-84
+109-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:87:25-81
+110                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+110-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:88:17-80
+110-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:88:25-77
+111                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+111-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:89:17-78
+111-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:89:25-75
+112            </intent-filter>
+113        </receiver>
+114
+115        <!-- activities -->
+116        <activity
+116-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:94:9-106:20
+117            android:name="com.serveme.savemyphone.view.MainActivity"
+117-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:95:13-69
+118            android:label="@string/app_name"
+118-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:96:13-45
+119            android:uiOptions="splitActionBarWhenNarrow" >
+119-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:97:13-57
+120            <meta-data
+120-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:98:13-100:60
+121                android:name="android.support.UI_OPTIONS"
+121-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:99:17-58
+122                android:value="splitActionBarWhenNarrow" />
+122-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:100:17-57
+123
+124            <intent-filter>
+124-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:102:13-105:29
+125                <action android:name="android.intent.action.MAIN" />
+125-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:103:17-69
+125-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:103:25-66
+126
+127                <category android:name="android.intent.category.LAUNCHER" />
+127-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:104:17-77
+127-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:104:27-74
+128            </intent-filter>
+129        </activity>
+130        <activity
+130-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:107:9-110:20
+131            android:name="com.serveme.savemyphone.view.BackGroundActivity"
+131-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:108:13-75
+132            android:label="@string/app_name" >
+132-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:109:13-45
+133        </activity>
+134        <activity
+134-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:111:9-116:20
+135            android:name="com.serveme.savemyphone.view.UserActivity"
+135-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:112:13-69
+136            android:label="@string/apps"
+136-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:113:13-41
+137            android:launchMode="singleTask"
+137-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:114:13-44
+138            android:theme="@style/UserActivity" >
+138-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:115:13-48
+139        </activity>
+140        <activity
+140-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:117:9-119:61
+141            android:name="com.serveme.savemyphone.view.wizard.AdminRequest"
+141-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:118:13-76
+142            android:label="@string/lock_permission_title" />
+142-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:119:13-58
+143        <activity
+143-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:120:9-122:74
+144            android:name="com.serveme.savemyphone.view.wizard.PasswordRequest"
+144-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:121:13-79
+145            android:label="@string/lock_method_chooser_activity_title" />
+145-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:122:13-71
+146        <activity
+146-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:123:9-125:59
+147            android:name="com.serveme.savemyphone.view.wizard.HelpActivity"
+147-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:124:13-76
+148            android:label="@string/help_activity_title" />
+148-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:125:13-56
+149        <activity
+149-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:126:9-128:48
+150            android:name="com.serveme.savemyphone.view.SettingsActivity"
+150-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:127:13-73
+151            android:label="@string/settings" />
+151-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:128:13-45
+152        <activity
+152-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:129:9-131:63
+153            android:name="com.serveme.savemyphone.view.wizard.RecoveryEmailRequest"
+153-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:130:13-84
+154            android:label="@string/recovery_activity_title" />
+154-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:131:13-60
+155        <activity
+155-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:132:9-135:64
+156            android:name="com.serveme.savemyphone.view.RecoveryActivity"
+156-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:133:13-73
+157            android:label="@string/recovery_activity_title"
+157-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:134:13-60
+158            android:windowSoftInputMode="stateAlwaysVisible" />
+158-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:135:13-61
+159
+160        <!-- external activities -->
+161        <activity
+161-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:138:9-142:62
+162            android:name="com.haibison.android.lockpattern.LockPatternActivity"
+162-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:139:13-80
+163            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+163-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:140:13-83
+164            android:screenOrientation="user"
+164-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:141:13-45
+165            android:theme="@style/Alp.42447968.Theme.Dark" />
+165-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:142:13-59
+166
+167        <service android:name="com.google.analytics.tracking.android.CampaignTrackingService" />
+167-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:144:9-97
+167-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:144:18-94
+168
+169        <!-- analytics -->
+170        <receiver
+170-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:147:9-153:20
+171            android:name="com.google.analytics.tracking.android.CampaignTrackingReceiver"
+171-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:148:13-90
+172            android:exported="true" >
+172-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:149:13-36
+173            <intent-filter>
+173-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:150:13-152:29
+174                <action android:name="com.android.vending.INSTALL_REFERRER" />
+174-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:151:17-79
+174-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:151:25-76
+175            </intent-filter>
+176        </receiver>
+177
+178        <meta-data
+178-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:26:9-27:68
+179            android:name="com.google.android.gms.version"
+179-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:26:20-65
+180            android:value="@integer/google_play_services_version" />
+180-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:27:13-66
+181
+182        <activity
+182-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:159:9-162:53
+183            android:name="com.google.android.gms.ads.AdActivity"
+183-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:160:13-65
+184            android:configChanges="orientation|keyboard|keyboardHidden|screenLayout|screenSize|smallestScreenSize|uiMode"
+184-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:161:13-122
+185            android:exported="false"
+185-->[com.google.android.gms:play-services-ads-lite:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/3cb029a0550ca0545aa2750c7317b6d0/jetified-play-services-ads-lite-12.0.1/AndroidManifest.xml:32:13-37
+186            android:theme="@android:style/Theme.Translucent" />
+186-->[com.google.android.gms:play-services-ads-lite:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/3cb029a0550ca0545aa2750c7317b6d0/jetified-play-services-ads-lite-12.0.1/AndroidManifest.xml:33:13-61
+187        <!-- android:theme="@android:style/Theme.NoTitleBar.Fullscreen" -->
+188
+189        <activity
+189-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:165:9-167:125
+190            android:name="com.noqoush.adfalcon.android.sdk.ADFBrowser"
+190-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:166:13-71
+191            android:configChanges="keyboard|keyboardHidden|orientation|uiMode|screenLayout|screenSize|smallestScreenSize" />
+191-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:167:13-122
+192        <activity
+192-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:168:9-172:20
+193            android:name="com.noqoush.adfalcon.android.sdk.ADFActivity"
+193-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:169:13-72
+194            android:configChanges="keyboard|keyboardHidden|orientation|uiMode|screenLayout|screenSize|smallestScreenSize"
+194-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:170:13-122
+195            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+195-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:171:13-83
+196        </activity>
+197        <activity
+197-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:173:9-177:20
+198            android:name="com.noqoush.adfalcon.android.sdk.ADFCanvas"
+198-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:174:13-70
+199            android:configChanges="keyboard|keyboardHidden|orientation|uiMode|screenLayout|screenSize|smallestScreenSize"
+199-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:175:13-122
+200            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+200-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:176:13-72
+201        </activity>
+202        <activity
+202-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:178:9-181:20
+203            android:name="com.serveme.savemyphone.view.UnlockSettingsActivity"
+203-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:179:13-79
+204            android:label="@string/hidden_lock" >
+204-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:180:13-48
+205        </activity>
+206        <activity
+206-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:182:9-191:20
+207            android:name="com.serveme.savemyphone.view.UserLauncherActivity"
+207-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:183:13-77
+208            android:enabled="false"
+208-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:184:13-36
+209            android:label="@string/title_activity_user_launcher" >
+209-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:185:13-65
+210            <intent-filter>
+210-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:102:13-105:29
+211                <action android:name="android.intent.action.MAIN" />
+211-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:103:17-69
+211-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:103:25-66
+212
+213                <category android:name="android.intent.category.LAUNCHER" />
+213-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:104:17-77
+213-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:104:27-74
+214            </intent-filter>
+215        </activity>
+216        <activity
+216-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:192:9-195:20
+217            android:name="com.serveme.savemyphone.view.BaseActivity"
+217-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:193:13-69
+218            android:theme="@android:style/Theme.NoTitleBar" >
+218-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:194:13-60
+219        </activity>
+220        <activity
+220-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:196:9-199:20
+221            android:name="com.serveme.savemyphone.view.WaitingActivity"
+221-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:197:13-72
+222            android:theme="@android:style/Theme.NoTitleBar" >
+222-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:198:13-60
+223        </activity>
+224        <activity
+224-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:200:9-203:20
+225            android:name="com.serveme.savemyphone.view.ManageSpaceActivity"
+225-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:201:13-76
+226            android:label="@string/title_activity_uninstall" >
+226-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:202:13-61
+227        </activity>
+228        <activity
+228-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:204:9-207:20
+229            android:name="com.serveme.savemyphone.view.AppsLogActivity"
+229-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:205:13-72
+230            android:label="@string/title_activity_apps_log" >
+230-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:206:13-60
+231        </activity>
+232        <activity
+232-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:208:9-211:20
+233            android:name="com.serveme.savemyphone.view.SessionLogActivity"
+233-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:209:13-75
+234            android:label="@string/title_activity_apps_log" >
+234-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:210:13-60
+235        </activity>
+236
+237        <receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver" />
+237-->[com.google.android.gms:play-services-cast-framework:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/c92e97746668c7a063abbdff8aa76fbb/jetified-play-services-cast-framework-12.0.1/AndroidManifest.xml:8:9-100
+237-->[com.google.android.gms:play-services-cast-framework:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/c92e97746668c7a063abbdff8aa76fbb/jetified-play-services-cast-framework-12.0.1/AndroidManifest.xml:8:19-97
+238
+239        <service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService" />
+239-->[com.google.android.gms:play-services-cast-framework:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/c92e97746668c7a063abbdff8aa76fbb/jetified-play-services-cast-framework-12.0.1/AndroidManifest.xml:10:9-104
+239-->[com.google.android.gms:play-services-cast-framework:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/c92e97746668c7a063abbdff8aa76fbb/jetified-play-services-cast-framework-12.0.1/AndroidManifest.xml:10:18-101
+240        <service android:name="com.google.android.gms.cast.framework.ReconnectionService" />
+240-->[com.google.android.gms:play-services-cast-framework:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/c92e97746668c7a063abbdff8aa76fbb/jetified-play-services-cast-framework-12.0.1/AndroidManifest.xml:11:9-93
+240-->[com.google.android.gms:play-services-cast-framework:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/c92e97746668c7a063abbdff8aa76fbb/jetified-play-services-cast-framework-12.0.1/AndroidManifest.xml:11:18-90
+241
+242        <receiver
+242-->[com.google.android.gms:play-services-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e2fc77f354c5bffe6d731e70ff4da88e/jetified-play-services-analytics-12.0.1/AndroidManifest.xml:30:9-34:20
+243            android:name="com.google.android.gms.analytics.AnalyticsReceiver"
+243-->[com.google.android.gms:play-services-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e2fc77f354c5bffe6d731e70ff4da88e/jetified-play-services-analytics-12.0.1/AndroidManifest.xml:31:13-78
+244            android:enabled="true"
+244-->[com.google.android.gms:play-services-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e2fc77f354c5bffe6d731e70ff4da88e/jetified-play-services-analytics-12.0.1/AndroidManifest.xml:32:13-35
+245            android:exported="false" >
+245-->[com.google.android.gms:play-services-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e2fc77f354c5bffe6d731e70ff4da88e/jetified-play-services-analytics-12.0.1/AndroidManifest.xml:33:13-37
+246        </receiver>
+247
+248        <service
+248-->[com.google.android.gms:play-services-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e2fc77f354c5bffe6d731e70ff4da88e/jetified-play-services-analytics-12.0.1/AndroidManifest.xml:36:9-39:40
+249            android:name="com.google.android.gms.analytics.AnalyticsService"
+249-->[com.google.android.gms:play-services-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e2fc77f354c5bffe6d731e70ff4da88e/jetified-play-services-analytics-12.0.1/AndroidManifest.xml:37:13-77
+250            android:enabled="true"
+250-->[com.google.android.gms:play-services-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e2fc77f354c5bffe6d731e70ff4da88e/jetified-play-services-analytics-12.0.1/AndroidManifest.xml:38:13-35
+251            android:exported="false" />
+251-->[com.google.android.gms:play-services-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e2fc77f354c5bffe6d731e70ff4da88e/jetified-play-services-analytics-12.0.1/AndroidManifest.xml:39:13-37
+252        <service
+252-->[com.google.android.gms:play-services-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e2fc77f354c5bffe6d731e70ff4da88e/jetified-play-services-analytics-12.0.1/AndroidManifest.xml:40:9-44:72
+253            android:name="com.google.android.gms.analytics.AnalyticsJobService"
+253-->[com.google.android.gms:play-services-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e2fc77f354c5bffe6d731e70ff4da88e/jetified-play-services-analytics-12.0.1/AndroidManifest.xml:41:13-80
+254            android:enabled="true"
+254-->[com.google.android.gms:play-services-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e2fc77f354c5bffe6d731e70ff4da88e/jetified-play-services-analytics-12.0.1/AndroidManifest.xml:42:13-35
+255            android:exported="false"
+255-->[com.google.android.gms:play-services-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e2fc77f354c5bffe6d731e70ff4da88e/jetified-play-services-analytics-12.0.1/AndroidManifest.xml:43:13-37
+256            android:permission="android.permission.BIND_JOB_SERVICE" />
+256-->[com.google.android.gms:play-services-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e2fc77f354c5bffe6d731e70ff4da88e/jetified-play-services-analytics-12.0.1/AndroidManifest.xml:44:13-69
+257
+258        <activity
+258-->[com.google.android.gms:play-services-appinvite:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/cd341f5c5fa9123dca3eb0d183352c93/jetified-play-services-appinvite-12.0.1/AndroidManifest.xml:25:9-34:20
+259            android:name="com.google.android.gms.appinvite.PreviewActivity"
+259-->[com.google.android.gms:play-services-appinvite:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/cd341f5c5fa9123dca3eb0d183352c93/jetified-play-services-appinvite-12.0.1/AndroidManifest.xml:26:13-76
+260            android:exported="true"
+260-->[com.google.android.gms:play-services-appinvite:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/cd341f5c5fa9123dca3eb0d183352c93/jetified-play-services-appinvite-12.0.1/AndroidManifest.xml:27:13-36
+261            android:theme="@style/Theme.AppInvite.Preview" >
+261-->[com.google.android.gms:play-services-appinvite:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/cd341f5c5fa9123dca3eb0d183352c93/jetified-play-services-appinvite-12.0.1/AndroidManifest.xml:28:13-59
+262            <intent-filter>
+262-->[com.google.android.gms:play-services-appinvite:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/cd341f5c5fa9123dca3eb0d183352c93/jetified-play-services-appinvite-12.0.1/AndroidManifest.xml:29:13-33:29
+263                <action android:name="com.google.android.gms.appinvite.ACTION_PREVIEW" />
+263-->[com.google.android.gms:play-services-appinvite:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/cd341f5c5fa9123dca3eb0d183352c93/jetified-play-services-appinvite-12.0.1/AndroidManifest.xml:30:17-90
+263-->[com.google.android.gms:play-services-appinvite:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/cd341f5c5fa9123dca3eb0d183352c93/jetified-play-services-appinvite-12.0.1/AndroidManifest.xml:30:25-87
+264
+265                <category android:name="android.intent.category.DEFAULT" />
+265-->[com.google.android.gms:play-services-appinvite:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/cd341f5c5fa9123dca3eb0d183352c93/jetified-play-services-appinvite-12.0.1/AndroidManifest.xml:32:17-76
+265-->[com.google.android.gms:play-services-appinvite:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/cd341f5c5fa9123dca3eb0d183352c93/jetified-play-services-appinvite-12.0.1/AndroidManifest.xml:32:27-73
+266            </intent-filter>
+267        </activity>
+268        <activity
+268-->[com.google.android.gms:play-services-auth:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/23d19cc1a68a76a8bb0b8ca556fd7b0e/jetified-play-services-auth-12.0.1/AndroidManifest.xml:23:9-27:75
+269            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+269-->[com.google.android.gms:play-services-auth:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/23d19cc1a68a76a8bb0b8ca556fd7b0e/jetified-play-services-auth-12.0.1/AndroidManifest.xml:24:13-93
+270            android:excludeFromRecents="true"
+270-->[com.google.android.gms:play-services-auth:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/23d19cc1a68a76a8bb0b8ca556fd7b0e/jetified-play-services-auth-12.0.1/AndroidManifest.xml:25:13-46
+271            android:exported="false"
+271-->[com.google.android.gms:play-services-auth:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/23d19cc1a68a76a8bb0b8ca556fd7b0e/jetified-play-services-auth-12.0.1/AndroidManifest.xml:26:13-37
+272            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+272-->[com.google.android.gms:play-services-auth:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/23d19cc1a68a76a8bb0b8ca556fd7b0e/jetified-play-services-auth-12.0.1/AndroidManifest.xml:27:13-72
+273        <!--
+274            Service handling Google Sign-In user revocation. For apps that do not integrate with
+275            Google Sign-In, this service will never be started.
+276        -->
+277        <service
+277-->[com.google.android.gms:play-services-auth:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/23d19cc1a68a76a8bb0b8ca556fd7b0e/jetified-play-services-auth-12.0.1/AndroidManifest.xml:33:9-36:110
+278            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+278-->[com.google.android.gms:play-services-auth:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/23d19cc1a68a76a8bb0b8ca556fd7b0e/jetified-play-services-auth-12.0.1/AndroidManifest.xml:34:13-89
+279            android:exported="true"
+279-->[com.google.android.gms:play-services-auth:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/23d19cc1a68a76a8bb0b8ca556fd7b0e/jetified-play-services-auth-12.0.1/AndroidManifest.xml:35:13-36
+280            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+280-->[com.google.android.gms:play-services-auth:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/23d19cc1a68a76a8bb0b8ca556fd7b0e/jetified-play-services-auth-12.0.1/AndroidManifest.xml:36:13-107
+281
+282        <activity
+282-->[com.google.firebase:firebase-auth:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/284c9953dbeda9504bb760b2cee6f4df/jetified-firebase-auth-12.0.1/AndroidManifest.xml:23:9-29:75
+283            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+283-->[com.google.firebase:firebase-auth:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/284c9953dbeda9504bb760b2cee6f4df/jetified-firebase-auth-12.0.1/AndroidManifest.xml:24:13-85
+284            android:excludeFromRecents="true"
+284-->[com.google.firebase:firebase-auth:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/284c9953dbeda9504bb760b2cee6f4df/jetified-firebase-auth-12.0.1/AndroidManifest.xml:25:13-46
+285            android:exported="true"
+285-->[com.google.firebase:firebase-auth:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/284c9953dbeda9504bb760b2cee6f4df/jetified-firebase-auth-12.0.1/AndroidManifest.xml:26:13-36
+286            android:launchMode="singleInstance"
+286-->[com.google.firebase:firebase-auth:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/284c9953dbeda9504bb760b2cee6f4df/jetified-firebase-auth-12.0.1/AndroidManifest.xml:27:13-48
+287            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+287-->[com.google.firebase:firebase-auth:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/284c9953dbeda9504bb760b2cee6f4df/jetified-firebase-auth-12.0.1/AndroidManifest.xml:28:13-102
+288            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+288-->[com.google.firebase:firebase-auth:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/284c9953dbeda9504bb760b2cee6f4df/jetified-firebase-auth-12.0.1/AndroidManifest.xml:29:13-72
+289        <activity
+289-->[com.google.android.gms:play-services-base:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/077841d47e90fcd63f677c317b467f9d/jetified-play-services-base-12.0.1/AndroidManifest.xml:23:9-26:75
+290            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+290-->[com.google.android.gms:play-services-base:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/077841d47e90fcd63f677c317b467f9d/jetified-play-services-base-12.0.1/AndroidManifest.xml:24:13-79
+291            android:exported="false"
+291-->[com.google.android.gms:play-services-base:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/077841d47e90fcd63f677c317b467f9d/jetified-play-services-base-12.0.1/AndroidManifest.xml:25:13-37
+292            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+292-->[com.google.android.gms:play-services-base:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/077841d47e90fcd63f677c317b467f9d/jetified-play-services-base-12.0.1/AndroidManifest.xml:26:13-72
+293        <!--
+294             FirebaseMessagingService performs security checks at runtime,
+295             no need for explicit permissions despite exported="true"
+296        -->
+297        <service
+297-->[com.google.firebase:firebase-messaging:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a70292e2447e8f62bd87c0e121c9a205/jetified-firebase-messaging-12.0.1/AndroidManifest.xml:28:9-34:19
+298            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+298-->[com.google.firebase:firebase-messaging:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a70292e2447e8f62bd87c0e121c9a205/jetified-firebase-messaging-12.0.1/AndroidManifest.xml:29:13-82
+299            android:exported="true" >
+299-->[com.google.firebase:firebase-messaging:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a70292e2447e8f62bd87c0e121c9a205/jetified-firebase-messaging-12.0.1/AndroidManifest.xml:30:13-36
+300            <intent-filter android:priority="-500" >
+300-->[com.google.firebase:firebase-messaging:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a70292e2447e8f62bd87c0e121c9a205/jetified-firebase-messaging-12.0.1/AndroidManifest.xml:31:13-33:29
+300-->[com.google.firebase:firebase-messaging:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a70292e2447e8f62bd87c0e121c9a205/jetified-firebase-messaging-12.0.1/AndroidManifest.xml:31:28-51
+301                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+301-->[com.google.firebase:firebase-messaging:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a70292e2447e8f62bd87c0e121c9a205/jetified-firebase-messaging-12.0.1/AndroidManifest.xml:32:17-78
+301-->[com.google.firebase:firebase-messaging:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a70292e2447e8f62bd87c0e121c9a205/jetified-firebase-messaging-12.0.1/AndroidManifest.xml:32:25-75
+302            </intent-filter>
+303        </service>
+304        <service
+304-->[com.google.android.gms:play-services-tagmanager-api:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/7533bbffd6fa4e9a935e1b5d4ea67c60/jetified-play-services-tagmanager-api-12.0.1/AndroidManifest.xml:27:9-30:40
+305            android:name="com.google.android.gms.tagmanager.TagManagerService"
+305-->[com.google.android.gms:play-services-tagmanager-api:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/7533bbffd6fa4e9a935e1b5d4ea67c60/jetified-play-services-tagmanager-api-12.0.1/AndroidManifest.xml:28:13-79
+306            android:enabled="true"
+306-->[com.google.android.gms:play-services-tagmanager-api:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/7533bbffd6fa4e9a935e1b5d4ea67c60/jetified-play-services-tagmanager-api-12.0.1/AndroidManifest.xml:29:13-35
+307            android:exported="false" />
+307-->[com.google.android.gms:play-services-tagmanager-api:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/7533bbffd6fa4e9a935e1b5d4ea67c60/jetified-play-services-tagmanager-api-12.0.1/AndroidManifest.xml:30:13-37
+308
+309        <activity
+309-->[com.google.android.gms:play-services-tagmanager-api:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/7533bbffd6fa4e9a935e1b5d4ea67c60/jetified-play-services-tagmanager-api-12.0.1/AndroidManifest.xml:32:9-44:20
+310            android:name="com.google.android.gms.tagmanager.TagManagerPreviewActivity"
+310-->[com.google.android.gms:play-services-tagmanager-api:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/7533bbffd6fa4e9a935e1b5d4ea67c60/jetified-play-services-tagmanager-api-12.0.1/AndroidManifest.xml:33:13-87
+311            android:exported="true"
+311-->[com.google.android.gms:play-services-tagmanager-api:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/7533bbffd6fa4e9a935e1b5d4ea67c60/jetified-play-services-tagmanager-api-12.0.1/AndroidManifest.xml:34:13-36
+312            android:noHistory="true" > <!-- optional, removes the previewActivity from the activity stack. -->
+312-->[com.google.android.gms:play-services-tagmanager-api:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/7533bbffd6fa4e9a935e1b5d4ea67c60/jetified-play-services-tagmanager-api-12.0.1/AndroidManifest.xml:35:13-37
+313            <intent-filter>
+313-->[com.google.android.gms:play-services-tagmanager-api:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/7533bbffd6fa4e9a935e1b5d4ea67c60/jetified-play-services-tagmanager-api-12.0.1/AndroidManifest.xml:36:13-43:29
+314                <data android:scheme="tagmanager.c.com.serveme.savemyphone" />
+314-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:65:17-50
+314-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:65:23-47
+315
+316                <action android:name="android.intent.action.VIEW" />
+316-->[com.google.android.gms:play-services-tagmanager-api:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/7533bbffd6fa4e9a935e1b5d4ea67c60/jetified-play-services-tagmanager-api-12.0.1/AndroidManifest.xml:39:17-69
+316-->[com.google.android.gms:play-services-tagmanager-api:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/7533bbffd6fa4e9a935e1b5d4ea67c60/jetified-play-services-tagmanager-api-12.0.1/AndroidManifest.xml:39:25-66
+317
+318                <category android:name="android.intent.category.DEFAULT" />
+318-->[com.google.android.gms:play-services-appinvite:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/cd341f5c5fa9123dca3eb0d183352c93/jetified-play-services-appinvite-12.0.1/AndroidManifest.xml:32:17-76
+318-->[com.google.android.gms:play-services-appinvite:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/cd341f5c5fa9123dca3eb0d183352c93/jetified-play-services-appinvite-12.0.1/AndroidManifest.xml:32:27-73
+319                <category android:name="android.intent.category.BROWSABLE" />
+319-->[com.google.android.gms:play-services-tagmanager-api:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/7533bbffd6fa4e9a935e1b5d4ea67c60/jetified-play-services-tagmanager-api-12.0.1/AndroidManifest.xml:42:17-78
+319-->[com.google.android.gms:play-services-tagmanager-api:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/7533bbffd6fa4e9a935e1b5d4ea67c60/jetified-play-services-tagmanager-api-12.0.1/AndroidManifest.xml:42:27-75
+320            </intent-filter>
+321        </activity>
+322
+323        <receiver
+323-->[com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:28:9-32:20
+324            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+324-->[com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:29:13-85
+325            android:enabled="true"
+325-->[com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:30:13-35
+326            android:exported="false" >
+326-->[com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:31:13-37
+327        </receiver>
+328        <receiver
+328-->[com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:33:9-41:20
+329            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+329-->[com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:34:13-100
+330            android:enabled="true"
+330-->[com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:35:13-35
+331            android:exported="true"
+331-->[com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:36:13-36
+332            android:permission="android.permission.INSTALL_PACKAGES" >
+332-->[com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:37:13-69
+333            <intent-filter>
+333-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:150:13-152:29
+334                <action android:name="com.android.vending.INSTALL_REFERRER" />
+334-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:151:17-79
+334-->/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:151:25-76
+335            </intent-filter>
+336        </receiver>
+337
+338        <service
+338-->[com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:43:9-46:40
+339            android:name="com.google.android.gms.measurement.AppMeasurementService"
+339-->[com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:44:13-84
+340            android:enabled="true"
+340-->[com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:45:13-35
+341            android:exported="false" />
+341-->[com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:46:13-37
+342        <service
+342-->[com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:47:9-51:72
+343            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+343-->[com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:48:13-87
+344            android:enabled="true"
+344-->[com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:49:13-35
+345            android:exported="false"
+345-->[com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:50:13-37
+346            android:permission="android.permission.BIND_JOB_SERVICE" />
+346-->[com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:51:13-69
+347
+348        <receiver
+348-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:35:9-44:20
+349            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+349-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:36:13-78
+350            android:exported="true"
+350-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:37:13-36
+351            android:permission="com.google.android.c2dm.permission.SEND" >
+351-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:38:13-73
+352            <intent-filter>
+352-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:39:13-43:29
+353                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+353-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:40:17-81
+353-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:40:25-78
+354
+355                <category android:name="com.serveme.savemyphone" />
+355-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:42:17-61
+355-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:42:27-58
+356            </intent-filter>
+357        </receiver>
+358        <!--
+359             FirebaseInstanceIdService performs security checks at runtime,
+360             no need for explicit permissions despite exported="true"
+361        -->
+362        <service
+362-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:50:9-56:19
+363            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+363-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:51:13-77
+364            android:exported="true" >
+364-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:52:13-36
+365            <intent-filter android:priority="-500" >
+365-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:53:13-55:29
+365-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:53:28-51
+366                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+366-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:54:17-80
+366-->[com.google.firebase:firebase-iid:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/50a210fa58918c85f6a7377706f3e521/jetified-firebase-iid-12.0.1/AndroidManifest.xml:54:25-77
+367            </intent-filter>
+368        </service>
+369
+370        <provider
+370-->[com.google.firebase:firebase-common:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/04ad523559c08b792731d6fc3dd2b900/jetified-firebase-common-12.0.1/AndroidManifest.xml:8:9-12:39
+371            android:name="com.google.firebase.provider.FirebaseInitProvider"
+371-->[com.google.firebase:firebase-common:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/04ad523559c08b792731d6fc3dd2b900/jetified-firebase-common-12.0.1/AndroidManifest.xml:9:13-77
+372            android:authorities="com.serveme.savemyphone.firebaseinitprovider"
+372-->[com.google.firebase:firebase-common:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/04ad523559c08b792731d6fc3dd2b900/jetified-firebase-common-12.0.1/AndroidManifest.xml:10:13-72
+373            android:exported="false"
+373-->[com.google.firebase:firebase-common:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/04ad523559c08b792731d6fc3dd2b900/jetified-firebase-common-12.0.1/AndroidManifest.xml:11:13-37
+374            android:initOrder="100" />
+374-->[com.google.firebase:firebase-common:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/04ad523559c08b792731d6fc3dd2b900/jetified-firebase-common-12.0.1/AndroidManifest.xml:12:13-36
+375    </application>
+376
+377</manifest>

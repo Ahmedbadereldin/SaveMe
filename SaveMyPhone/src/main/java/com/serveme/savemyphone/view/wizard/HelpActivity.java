@@ -1,10 +1,7 @@
 package com.serveme.savemyphone.view.wizard;
 
-import android.content.ComponentName;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.method.ScrollingMovementMethod;
@@ -15,12 +12,14 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.TextView.BufferType;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.serveme.savemyphone.R;
 import com.serveme.savemyphone.util.MyTracker;
 import com.serveme.savemyphone.view.MainActivity;
-import com.serveme.savemyphone.view.UserLauncherActivity;
 
-public class HelpActivity extends ActionBarActivity {
+public class HelpActivity extends AppCompatActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

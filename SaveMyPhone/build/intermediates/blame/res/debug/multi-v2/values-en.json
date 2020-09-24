@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en/values-en.xml",
+            "map": [
+                {
+                    "source": "/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/AndroidLockPattern/androidlockpattern/build/intermediates/packaged_res/debug/values-en/values-en.xml",
+                    "from": {
+                        "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,277,338,401,477,534,592,681,772,866,955,1051,1143,1235,1315,1413,1508,1580",
+                        "endLines": "5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
+                        "endColumns": "14,60,62,75,56,57,88,90,93,88,95,91,91,79,97,94,71,93",
+                        "endOffsets": "272,333,396,472,529,587,676,767,861,950,1046,1138,1230,1310,1408,1503,1575,1669"
+                    }
+                }
+            ]
+        }
+    ]
+}

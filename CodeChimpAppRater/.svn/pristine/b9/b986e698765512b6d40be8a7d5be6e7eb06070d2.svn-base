@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/home/work/AndroidStudioProjects/Libraries/app-rater/AppRater/src/main/res/values-ar/strings.xml -->
+    <eat-comment/>
+    <string name="dialog_title">قيم %s</string>
+    <string name="later">لاحقا</string>
+    <string name="no_thanks">لا أريد</string>
+    <string name="rate">قيمه الأن</string>
+    <string name="rate_message">إذا استمتعت باستخدام التطبيق الرجاء تقيمه في المتجر... شكرا للدعم!</string>
+</resources>

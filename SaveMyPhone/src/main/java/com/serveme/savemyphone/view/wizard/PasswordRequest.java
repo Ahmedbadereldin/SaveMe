@@ -3,13 +3,14 @@ package com.serveme.savemyphone.view.wizard;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.haibison.android.lockpattern.LockPatternActivity;
 import com.serveme.savemyphone.R;
@@ -18,7 +19,7 @@ import com.serveme.savemyphone.util.MyTracker;
 import com.serveme.savemyphone.view.utils.ActivitiesController;
 import com.serveme.savemyphone.view.utils.Authenticator;
 
-public class PasswordRequest extends ActionBarActivity {
+public class PasswordRequest extends AppCompatActivity {
 
 	public static final int REQ_CREATE_PATTERN = 1;
 	public static final int REQ_CREATE_PASSWORD = 2;

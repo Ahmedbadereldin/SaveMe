@@ -2,9 +2,9 @@ package com.serveme.savemyphone.control;
 
 import java.util.List;
 
-import com.google.analytics.tracking.android.EasyTracker;
-import com.google.analytics.tracking.android.MapBuilder;
-import com.google.analytics.tracking.android.Tracker;
+//import com.google.analytics.tracking.android.EasyTracker;
+//import com.google.analytics.tracking.android.MapBuilder;
+//import com.google.analytics.tracking.android.Tracker;
 import com.serveme.savemyphone.R;
 import com.serveme.savemyphone.model.Launcher;
 import com.serveme.savemyphone.view.utils.AnalyticsExceptionParser;
@@ -92,12 +92,12 @@ public class GridAdapter extends BaseAdapter {
 			// txtView.setCompoundDrawablesWithIntrinsicBounds(null, img, null,
 			// null);
 		} catch (NameNotFoundException nameNotFoundException) {
-			Tracker tracker = EasyTracker.getInstance(context);
-			tracker.send(MapBuilder
-					.createException(
-							new AnalyticsExceptionParser().getDescription(
-									Thread.currentThread().toString(),
-									nameNotFoundException), false).build());
+//			Tracker tracker = EasyTracker.getInstance(context);
+//			tracker.send(MapBuilder
+//					.createException(
+//							new AnalyticsExceptionParser().getDescription(
+//									Thread.currentThread().toString(),
+//									nameNotFoundException), false).build());
 		} catch (OutOfMemoryError e) {// large images
 			// TODO: handle exception
 		}

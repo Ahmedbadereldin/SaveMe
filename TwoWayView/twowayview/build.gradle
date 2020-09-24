@@ -1,0 +1,14 @@
+apply plugin: 'com.android.library'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+}
+
+android {
+    compileSdkVersion 30
+}
+

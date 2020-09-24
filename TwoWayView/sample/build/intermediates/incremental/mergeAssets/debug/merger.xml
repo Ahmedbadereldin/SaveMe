@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="unspecified"><source path="D:\AndroidStudioProjects\Libraries\TwoWayView\sample\build\intermediates\exploded-aar\TwoWayView\twowayview\unspecified\assets"/></dataSet><dataSet config="main"><source path="D:\AndroidStudioProjects\Libraries\TwoWayView\sample\src\main\assets"/></dataSet><dataSet config="debug"><source path="D:\AndroidStudioProjects\Libraries\TwoWayView\sample\src\debug\assets"/></dataSet></merger>

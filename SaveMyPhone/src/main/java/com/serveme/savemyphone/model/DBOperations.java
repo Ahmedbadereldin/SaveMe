@@ -5,10 +5,6 @@ import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-import com.google.analytics.tracking.android.EasyTracker;
-import com.google.analytics.tracking.android.MapBuilder;
-import com.google.analytics.tracking.android.Tracker;
-import com.google.android.gms.internal.fb;
 import com.serveme.savemyphone.preferences.PrefEditor;
 import com.serveme.savemyphone.view.utils.AnalyticsExceptionParser;
 
@@ -65,22 +61,22 @@ public class DBOperations extends DataSetObservable {
 				try {
 					cursor.close();
 				} catch (Exception exception) {
-					Tracker tracker = EasyTracker.getInstance(context);
-					tracker.send(MapBuilder.createException(
-							new AnalyticsExceptionParser().getDescription(
-									Thread.currentThread().toString(),
-									exception), false).build());
+//					Tracker tracker = EasyTracker.getInstance(context);
+//					tracker.send(MapBuilder.createException(
+//							new AnalyticsExceptionParser().getDescription(
+//									Thread.currentThread().toString(),
+//									exception), false).build());
 				}
 			}
 			if (database != null && database.isOpen()) {
 				try {
 					database.close();
 				} catch (Exception exception) {
-					Tracker tracker = EasyTracker.getInstance(context);
-					tracker.send(MapBuilder.createException(
-							new AnalyticsExceptionParser().getDescription(
-									Thread.currentThread().toString(),
-									exception), false).build());
+//					Tracker tracker = EasyTracker.getInstance(context);
+//					tracker.send(MapBuilder.createException(
+//							new AnalyticsExceptionParser().getDescription(
+//									Thread.currentThread().toString(),
+//									exception), false).build());
 				}
 			}
 		}
@@ -100,11 +96,11 @@ public class DBOperations extends DataSetObservable {
 				try {
 					database.close();
 				} catch (Exception exception) {
-					Tracker tracker = EasyTracker.getInstance(context);
-					tracker.send(MapBuilder.createException(
-							new AnalyticsExceptionParser().getDescription(
-									Thread.currentThread().toString(),
-									exception), false).build());
+//					Tracker tracker = EasyTracker.getInstance(context);
+//					tracker.send(MapBuilder.createException(
+//							new AnalyticsExceptionParser().getDescription(
+//									Thread.currentThread().toString(),
+//									exception), false).build());
 				}
 			}
 		}
@@ -132,11 +128,11 @@ public class DBOperations extends DataSetObservable {
 				try {
 					database.close();
 				} catch (Exception exception) {
-					Tracker tracker = EasyTracker.getInstance(context);
-					tracker.send(MapBuilder.createException(
-							new AnalyticsExceptionParser().getDescription(
-									Thread.currentThread().toString(),
-									exception), false).build());
+//					Tracker tracker = EasyTracker.getInstance(context);
+//					tracker.send(MapBuilder.createException(
+//							new AnalyticsExceptionParser().getDescription(
+//									Thread.currentThread().toString(),
+//									exception), false).build());
 				}
 			}
 		}
@@ -166,11 +162,11 @@ public class DBOperations extends DataSetObservable {
 				try {
 					database.close();
 				} catch (Exception exception) {
-					Tracker tracker = EasyTracker.getInstance(context);
-					tracker.send(MapBuilder.createException(
-							new AnalyticsExceptionParser().getDescription(
-									Thread.currentThread().toString(),
-									exception), false).build());
+//					Tracker tracker = EasyTracker.getInstance(context);
+//					tracker.send(MapBuilder.createException(
+//							new AnalyticsExceptionParser().getDescription(
+//									Thread.currentThread().toString(),
+//									exception), false).build());
 				}
 			}
 		}
@@ -191,11 +187,11 @@ public class DBOperations extends DataSetObservable {
 				try {
 					database.close();
 				} catch (Exception exception) {
-					Tracker tracker = EasyTracker.getInstance(context);
-					tracker.send(MapBuilder.createException(
-							new AnalyticsExceptionParser().getDescription(
-									Thread.currentThread().toString(),
-									exception), false).build());
+//					Tracker tracker = EasyTracker.getInstance(context);
+//					tracker.send(MapBuilder.createException(
+//							new AnalyticsExceptionParser().getDescription(
+//									Thread.currentThread().toString(),
+//									exception), false).build());
 				}
 			}
 		}
@@ -229,22 +225,22 @@ public class DBOperations extends DataSetObservable {
 				try {
 					cursor.close();
 				} catch (Exception exception) {
-					Tracker tracker = EasyTracker.getInstance(context);
-					tracker.send(MapBuilder.createException(
-							new AnalyticsExceptionParser().getDescription(
-									Thread.currentThread().toString(),
-									exception), false).build());
+//					Tracker tracker = EasyTracker.getInstance(context);
+//					tracker.send(MapBuilder.createException(
+//							new AnalyticsExceptionParser().getDescription(
+//									Thread.currentThread().toString(),
+//									exception), false).build());
 				}
 			}
 			if (database != null) {
 				try {
 					database.close();
 				} catch (Exception exception) {
-					Tracker tracker = EasyTracker.getInstance(context);
-					tracker.send(MapBuilder.createException(
-							new AnalyticsExceptionParser().getDescription(
-									Thread.currentThread().toString(),
-									exception), false).build());
+//					Tracker tracker = EasyTracker.getInstance(context);
+//					tracker.send(MapBuilder.createException(
+//							new AnalyticsExceptionParser().getDescription(
+//									Thread.currentThread().toString(),
+//									exception), false).build());
 				}
 			}
 		}
@@ -295,26 +291,26 @@ public class DBOperations extends DataSetObservable {
 						try {
 							cursor.close();
 						} catch (Exception exception) {
-							Tracker tracker = EasyTracker.getInstance(context);
-							tracker.send(MapBuilder.createException(
-									new AnalyticsExceptionParser()
-											.getDescription(
-													Thread.currentThread()
-															.toString(),
-													exception), false).build());
+//							Tracker tracker = EasyTracker.getInstance(context);
+//							tracker.send(MapBuilder.createException(
+//									new AnalyticsExceptionParser()
+//											.getDescription(
+//													Thread.currentThread()
+//															.toString(),
+//													exception), false).build());
 						}
 					}
 					if (database != null && database.isOpen()) {
 						try {
 							database.close();
 						} catch (Exception exception) {
-							Tracker tracker = EasyTracker.getInstance(context);
-							tracker.send(MapBuilder.createException(
-									new AnalyticsExceptionParser()
-											.getDescription(
-													Thread.currentThread()
-															.toString(),
-													exception), false).build());
+//							Tracker tracker = EasyTracker.getInstance(context);
+//							tracker.send(MapBuilder.createException(
+//									new AnalyticsExceptionParser()
+//											.getDescription(
+//													Thread.currentThread()
+//															.toString(),
+//													exception), false).build());
 						}
 					}
 				}
@@ -375,26 +371,26 @@ public class DBOperations extends DataSetObservable {
 						try {
 							cursor.close();
 						} catch (Exception exception) {
-							Tracker tracker = EasyTracker.getInstance(context);
-							tracker.send(MapBuilder.createException(
-									new AnalyticsExceptionParser()
-											.getDescription(
-													Thread.currentThread()
-															.toString(),
-													exception), false).build());
+//							Tracker tracker = EasyTracker.getInstance(context);
+//							tracker.send(MapBuilder.createException(
+//									new AnalyticsExceptionParser()
+//											.getDescription(
+//													Thread.currentThread()
+//															.toString(),
+//													exception), false).build());
 						}
 					}
 					if (database != null && database.isOpen()) {
 						try {
 							database.close();
 						} catch (Exception exception) {
-							Tracker tracker = EasyTracker.getInstance(context);
-							tracker.send(MapBuilder.createException(
-									new AnalyticsExceptionParser()
-											.getDescription(
-													Thread.currentThread()
-															.toString(),
-													exception), false).build());
+//							Tracker tracker = EasyTracker.getInstance(context);
+//							tracker.send(MapBuilder.createException(
+//									new AnalyticsExceptionParser()
+//											.getDescription(
+//													Thread.currentThread()
+//															.toString(),
+//													exception), false).build());
 						}
 					}
 				}
@@ -416,11 +412,11 @@ public class DBOperations extends DataSetObservable {
 				try {
 					database.close();
 				} catch (Exception exception) {
-					Tracker tracker = EasyTracker.getInstance(context);
-					tracker.send(MapBuilder.createException(
-							new AnalyticsExceptionParser().getDescription(
-									Thread.currentThread().toString(),
-									exception), false).build());
+//					Tracker tracker = EasyTracker.getInstance(context);
+//					tracker.send(MapBuilder.createException(
+//							new AnalyticsExceptionParser().getDescription(
+//									Thread.currentThread().toString(),
+//									exception), false).build());
 				}
 			}
 		}
@@ -441,11 +437,11 @@ public class DBOperations extends DataSetObservable {
 				try {
 					database.close();
 				} catch (Exception exception) {
-					Tracker tracker = EasyTracker.getInstance(context);
-					tracker.send(MapBuilder.createException(
-							new AnalyticsExceptionParser().getDescription(
-									Thread.currentThread().toString(),
-									exception), false).build());
+//					Tracker tracker = EasyTracker.getInstance(context);
+//					tracker.send(MapBuilder.createException(
+//							new AnalyticsExceptionParser().getDescription(
+//									Thread.currentThread().toString(),
+//									exception), false).build());
 				}
 			}
 		}

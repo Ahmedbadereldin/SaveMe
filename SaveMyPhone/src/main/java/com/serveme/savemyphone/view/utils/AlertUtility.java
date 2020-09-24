@@ -9,9 +9,6 @@ import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.view.WindowManager;
 
-import com.google.analytics.tracking.android.EasyTracker;
-import com.google.analytics.tracking.android.MapBuilder;
-import com.google.analytics.tracking.android.Tracker;
 import com.serveme.savemyphone.view.UserView;
 
 public class AlertUtility {
@@ -44,10 +41,10 @@ public class AlertUtility {
 											+ thisView.getContext().getAssets()
 													.list("background")[3])));
 		} catch (IOException e) {
-			Tracker tracker = EasyTracker.getInstance(context);
-			tracker.send(MapBuilder.createException(
-					new AnalyticsExceptionParser().getDescription(Thread
-							.currentThread().toString(), e), false).build());
+//			Tracker tracker = EasyTracker.getInstance(context);
+//			tracker.send(MapBuilder.createException(
+//					new AnalyticsExceptionParser().getDescription(Thread
+//							.currentThread().toString(), e), false).build());
 		}
 		return thisView;
 	}

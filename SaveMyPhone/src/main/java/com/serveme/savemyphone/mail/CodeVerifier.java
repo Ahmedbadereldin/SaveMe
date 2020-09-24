@@ -10,9 +10,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.analytics.tracking.android.EasyTracker;
-import com.google.analytics.tracking.android.MapBuilder;
-import com.google.analytics.tracking.android.Tracker;
 import com.serveme.savemyphone.R;
 import com.serveme.savemyphone.preferences.PrefEditor;
 import com.serveme.savemyphone.view.RecoveryActivity;
@@ -59,11 +56,11 @@ public class CodeVerifier implements Response.Listener<String>,
 				Toast.LENGTH_LONG).show();
 
 		if (!(error.getCause() instanceof UnknownHostException)) {
-			Tracker tracker = EasyTracker.getInstance(recoveryActivity);
-			tracker.send(MapBuilder.createException(
-					new AnalyticsExceptionParser().getDescription(Thread
-							.currentThread().toString(), error.getCause()),
-					false).build());
+//			Tracker tracker = EasyTracker.getInstance(recoveryActivity);
+//			tracker.send(MapBuilder.createException(
+//					new AnalyticsExceptionParser().getDescription(Thread
+//							.currentThread().toString(), error.getCause()),
+//					false).build());
 		}
 	}
 

@@ -9,16 +9,14 @@ import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import com.google.analytics.tracking.android.EasyTracker;
-import com.google.analytics.tracking.android.MapBuilder;
-import com.google.analytics.tracking.android.Tracker;
 import com.serveme.savemyphone.R;
 import com.serveme.savemyphone.control.StanderListAdapter;
 import com.serveme.savemyphone.util.MyTracker;
@@ -27,7 +25,7 @@ import com.serveme.savemyphone.view.utils.BackgroundUtility;
 
 import org.lucasr.twowayview.TwoWayView;
 
-public class BackGroundActivity extends ActionBarActivity {
+public class BackGroundActivity extends AppCompatActivity {
 	private StanderListAdapter adapter;
 
 	private static class Result {
@@ -88,12 +86,12 @@ public class BackGroundActivity extends ActionBarActivity {
 					}
 					return result;
 				} catch (IOException e) {
-					Tracker tracker = EasyTracker
-							.getInstance(BackGroundActivity.this);
-					tracker.send(MapBuilder.createException(
-							new AnalyticsExceptionParser().getDescription(
-									Thread.currentThread().toString(), e),
-							false).build());
+//					Tracker tracker = EasyTracker
+//							.getInstance(BackGroundActivity.this);
+//					tracker.send(MapBuilder.createException(
+//							new AnalyticsExceptionParser().getDescription(
+//									Thread.currentThread().toString(), e),
+//							false).build());
 				}
 				return null;
 			}

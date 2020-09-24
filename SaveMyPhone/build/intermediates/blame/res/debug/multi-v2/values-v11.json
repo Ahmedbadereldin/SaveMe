@@ -1,0 +1,58 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml",
+            "map": [
+                {
+                    "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/cd341f5c5fa9123dca3eb0d183352c93/jetified-play-services-appinvite-12.0.1/res/values-v11/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "172",
+                        "endLines": "5",
+                        "endColumns": "8",
+                        "endOffsets": "293"
+                    },
+                    "to": {
+                        "startLines": "30",
+                        "startColumns": "4",
+                        "startOffsets": "2217",
+                        "endLines": "31",
+                        "endColumns": "8",
+                        "endOffsets": "2338"
+                    }
+                },
+                {
+                    "source": "/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/ServeMeFramework/servemeframework/build/intermediates/packaged_res/debug/values-v11/values-v11.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "187"
+                    },
+                    "to": {
+                        "startLines": "27",
+                        "startColumns": "4",
+                        "startOffsets": "2080",
+                        "endLines": "29",
+                        "endColumns": "12",
+                        "endOffsets": "2212"
+                    }
+                },
+                {
+                    "source": "/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/AndroidLockPattern/androidlockpattern/build/intermediates/packaged_res/debug/values-v11/values-v11.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,11,15,19,23",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,138,235,339,429,533,830,1141,1454,1753",
+                        "endLines": "2,3,4,5,6,10,14,18,22,26",
+                        "endColumns": "82,96,103,89,103,12,12,12,12,12",
+                        "endOffsets": "133,230,334,424,528,825,1136,1449,1748,2075"
+                    }
+                }
+            ]
+        }
+    ]
+}
