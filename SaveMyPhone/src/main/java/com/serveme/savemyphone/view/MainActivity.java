@@ -7,18 +7,23 @@ import org.codechimp.apprater.AppRater;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.ads.AdRequest;
@@ -30,6 +35,7 @@ import com.serveme.savemyphone.model.DBOperations;
 import com.serveme.savemyphone.preferences.PrefEditor;
 import com.serveme.savemyphone.service.AppsMonitor;
 import com.serveme.savemyphone.util.MyTracker;
+import com.serveme.savemyphone.util.PermissionHelper;
 import com.serveme.savemyphone.util.Utility;
 import com.serveme.savemyphone.view.utils.ActivitiesController;
 import com.serveme.savemyphone.view.utils.AdMobListener;
@@ -54,6 +60,13 @@ public class MainActivity extends AppCompatActivity {
 			ac.getActivitiesFlow();
 		}
 		setContentView(R.layout.main_activity);
+		//
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
+			this.setShowWhenLocked(true);
+			this.setTurnScreenOn(true);
+		}
+
 		if (getIntent().getBooleanExtra("first_time", false)
 				|| savedInstanceState != null) {
 			intialize();
@@ -148,6 +161,11 @@ public class MainActivity extends AppCompatActivity {
 	@Override
 	protected void onStart() {
 		super.onStart();
+		if (PermissionHelper.checkDrawOverlayPermission(MainActivity.this)){
+			Log.d("onStart", "onStart: Done");
+		}else {
+			PermissionHelper.drawOverlayPermission(MainActivity.this,PermissionHelper.CODE_OVERLAY_PERMISSION);
+		}
 		MyTracker.fireActivityStartEvent(MainActivity.this);
 		MyTracker.setUncaughtExceptionHandler(this);
 	}
@@ -237,36 +255,53 @@ public class MainActivity extends AppCompatActivity {
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
 		switch (requestCode) {
-		case REQ_ENTER_PATTERN: {
-			switch (resultCode) {
-			case RESULT_OK:
-				intialize();
+			case REQ_ENTER_PATTERN: {
+				switch (resultCode) {
+					case RESULT_OK:
+						intialize();
+						break;
+					case RESULT_CANCELED:
+						finish();
+						break;
+					case LockPatternActivity.RESULT_FAILED:
+						finish();
+						break;
+					case LockPatternActivity.RESULT_FORGOT_PATTERN:
+						finish();
+						break;
+				}
+
+				/*
+				 * In any case, there's always a key EXTRA_RETRY_COUNT, which holds
+				 * the number of tries that the user did.
+				 */
+				/*
+				 * In any case, there's always a key EXTRA_RETRY_COUNT, which holds
+				 * the number of tries that the user did.
+				 */
+				// int retryCount =
+				// data.getIntExtra(LockPatternActivity.EXTRA_RETRY_COUNT, 0);
+
 				break;
-			case RESULT_CANCELED:
-				finish();
-				break;
-			case LockPatternActivity.RESULT_FAILED:
-				finish();
-				break;
-			case LockPatternActivity.RESULT_FORGOT_PATTERN:
-				finish();
+			}// REQ_ENTER_PATTERN
+		}
+	}
+
+	@Override
+	public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+		super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+		switch (requestCode) {
+			case PermissionHelper.CODE_OVERLAY_PERMISSION: {
+				if (PermissionHelper.checkDrawOverlayPermission(this)){
+					Log.d("onRequestPermissions", "onRequestPermissionsResult: ok");
+				}else {
+					Toast.makeText(this, "يرجى الموافقة على الصلاحيات", Toast.LENGTH_SHORT).show();
+				}
 				break;
 			}
-
-			/*
-			 * In any case, there's always a key EXTRA_RETRY_COUNT, which holds
-			 * the number of tries that the user did.
-			 */
-			/*
-			 * In any case, there's always a key EXTRA_RETRY_COUNT, which holds
-			 * the number of tries that the user did.
-			 */
-			// int retryCount =
-			// data.getIntExtra(LockPatternActivity.EXTRA_RETRY_COUNT, 0);
-
-			break;
-		}// REQ_ENTER_PATTERN
 		}
 	}
 

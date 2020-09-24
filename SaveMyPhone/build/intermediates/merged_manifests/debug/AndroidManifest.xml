@@ -17,6 +17,9 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Optional permission for Analytics to run. -->
@@ -164,16 +167,17 @@
             android:screenOrientation="user"
             android:theme="@style/Alp.42447968.Theme.Dark" />
 
-        <service android:name="com.google.analytics.tracking.android.CampaignTrackingService" />
+        <!-- <service android:name="com.google.analytics.tracking.android.CampaignTrackingService" /> -->
+
 
         <!-- analytics -->
-        <receiver
-            android:name="com.google.analytics.tracking.android.CampaignTrackingReceiver"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="com.android.vending.INSTALL_REFERRER" />
-            </intent-filter>
-        </receiver>
+        <!-- <receiver -->
+        <!-- android:name="com.google.analytics.tracking.android.CampaignTrackingReceiver" -->
+        <!-- android:exported="true" > -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.android.vending.INSTALL_REFERRER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
 
         <meta-data
             android:name="com.google.android.gms.version"

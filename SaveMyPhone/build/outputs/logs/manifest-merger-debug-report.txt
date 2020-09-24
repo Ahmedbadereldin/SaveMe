@@ -1,8 +1,8 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:2:1-214:12
-INJECTED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:2:1-214:12
-INJECTED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:2:1-214:12
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:2:1-218:12
+INJECTED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:2:1-218:12
+INJECTED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:2:1-218:12
 MERGED from [androidx.multidex:multidex:2.0.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/26134ccdb2d0f0668471e01e1e50dcd9/multidex-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [:ServeMeFramework:servemeframework] /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/ServeMeFramework/servemeframework/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-18:12
 MERGED from [com.google.android.gms:play-services:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/49d3f5101f91b17d5fff115495f18e51/play-services-12.0.1/AndroidManifest.xml:2:1-6:12
@@ -145,8 +145,8 @@ MERGED from [com.google.android.gms:play-services-vision-common-license:12.0.1] 
 MERGED from [com.google.android.gms:play-services-vision-license:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/6fb55449160741dcd47e71f2d1c7a04d/play-services-vision-license-12.0.1/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-wallet-license:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/f833a9b7ea1ee8594bdf7d3f10f67c72/play-services-wallet-license-12.0.1/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/ef9bc0a8e4f77978b496c49cd0a58cc9/play-services-wearable-license-12.0.1/AndroidManifest.xml:17:1-24:12
-INJECTED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:2:1-214:12
-INJECTED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:2:1-214:12
+INJECTED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:2:1-218:12
+INJECTED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:2:1-218:12
 	package
 		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:4:5-38
 		INJECTED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml
@@ -233,8 +233,18 @@ uses-permission#android.permission.KILL_BACKGROUND_PROCESSES
 ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:16:2-81
 	android:name
 		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:16:19-78
+uses-permission#android.permission.INTERNAL_SYSTEM_WINDOW
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:18:5-19:47
+	tools:ignore
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:19:9-44
+	android:name
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:18:22-78
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:20:5-77
+	android:name
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:20:22-74
 application
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:18:5-212:19
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:22:5-216:19
 MERGED from [:ServeMeFramework:servemeframework] /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/ServeMeFramework/servemeframework/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-16:19
 MERGED from [:ServeMeFramework:servemeframework] /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/ServeMeFramework/servemeframework/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-16:19
 MERGED from [com.google.android.gms:play-services:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/49d3f5101f91b17d5fff115495f18e51/play-services-12.0.1/AndroidManifest.xml:5:5-20
@@ -430,330 +440,314 @@ MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] /User
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/429fb715fcc7711d4ab133e350b6f531/core-1.3.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:23:9-35
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:27:9-35
 	android:label
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:21:9-41
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:25:9-41
 	android:manageSpaceActivity
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:22:9-87
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:26:9-87
 	android:icon
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:20:9-45
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:24:9-45
 	android:allowBackup
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:19:9-35
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:23:9-35
 	android:theme
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:24:9-40
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:28:9-40
 meta-data#com.google.android.gms.version
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:26:9-27:68
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:30:9-31:68
 MERGED from [com.google.android.gms:play-services-basement:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a902a8245d2fbaf4246e326b9c704ddc/jetified-play-services-basement-12.0.1/AndroidManifest.xml:23:9-25:69
 MERGED from [com.google.android.gms:play-services-basement:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a902a8245d2fbaf4246e326b9c704ddc/jetified-play-services-basement-12.0.1/AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:27:13-66
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:31:13-66
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:26:20-65
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:30:20-65
 service#com.serveme.savemyphone.service.AppsMonitor
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:30:9-32:38
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:34:9-36:38
 	android:enabled
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:32:13-35
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:36:13-35
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:31:13-71
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:35:13-71
 service#com.serveme.savemyphone.control.NotificationObserver
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:33:9-40:19
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:37:9-44:19
 	android:label
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:35:13-45
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:39:13-45
 	android:permission
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:36:13-87
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:40:13-87
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:34:13-80
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:38:13-80
 intent-filter#action:name:android.service.notification.NotificationListenerService
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:37:13-39:29
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:41:13-43:29
 action#android.service.notification.NotificationListenerService
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:38:17-99
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:42:17-99
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:38:25-96
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:42:25-96
 receiver#com.serveme.savemyphone.receivers.BootReceiver
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:43:9-48:20
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:47:9-52:20
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:43:19-80
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:47:19-80
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:44:13-47:29
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:48:13-51:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:45:17-79
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:49:17-79
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:45:25-76
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:49:25-76
 receiver#com.serveme.savemyphone.receivers.AdminReciver
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:49:9-60:20
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:53:9-64:20
 	android:permission
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:51:13-70
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:55:13-70
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:50:13-74
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:54:13-74
 meta-data#android.app.device_admin
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:52:13-54:61
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:56:13-58:61
 	android:resource
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:54:17-58
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:58:17-58
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:53:17-56
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:57:17-56
 intent-filter#action:name:android.app.action.DEVICE_ADMIN_DISABLED+action:name:android.app.action.DEVICE_ADMIN_ENABLED
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:56:13-59:29
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:60:13-63:29
 action#android.app.action.DEVICE_ADMIN_ENABLED
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:57:17-82
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:61:17-82
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:57:25-79
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:61:25-79
 action#android.app.action.DEVICE_ADMIN_DISABLED
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:58:17-83
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:62:17-83
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:58:25-80
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:62:25-80
 receiver#com.serveme.savemyphone.receivers.RemovePackageReceiver
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:61:9-72:20
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:65:9-76:20
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:61:19-89
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:65:19-89
 intent-filter#action:name:android.intent.action.PACKAGE_FULLY_REMOVED+data:scheme:package
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:62:13-66:29
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:66:13-70:29
 action#android.intent.action.PACKAGE_FULLY_REMOVED
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:63:17-86
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:67:17-86
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:63:25-83
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:67:25-83
 data
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:65:17-50
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:69:17-50
 	android:scheme
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:65:23-47
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:69:23-47
 intent-filter#action:name:android.intent.action.PACKAGE_REMOVED+data:scheme:package
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:67:13-71:29
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:71:13-75:29
 action#android.intent.action.PACKAGE_REMOVED
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:68:17-80
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:72:17-80
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:68:25-77
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:72:25-77
 receiver#com.serveme.savemyphone.receivers.UpdatePackageReceiver
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:73:9-80:20
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:77:9-84:20
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:73:19-89
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:77:19-89
 intent-filter#action:name:android.intent.action.PACKAGE_CHANGED+action:name:android.intent.action.PACKAGE_REPLACED+data:scheme:package
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:74:13-79:29
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:78:13-83:29
 action#android.intent.action.PACKAGE_CHANGED
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:75:17-80
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:79:17-80
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:75:25-77
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:79:25-77
 action#android.intent.action.PACKAGE_REPLACED
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:76:17-81
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:80:17-81
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:76:25-78
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:80:25-78
 receiver#com.serveme.savemyphone.receivers.SDCardReceiver
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:81:9-91:20
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:85:9-95:20
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:81:19-82
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:85:19-82
 intent-filter#action:name:android.intent.ACTION_MEDIA_BAD_REMOVAL+action:name:android.intent.action.ACTION_MEDIA_SHARED+action:name:android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE+action:name:android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE+action:name:android.intent.action.MEDIA_MOUNTED+action:name:android.intent.action.MEDIA_REMOVED+action:name:android.intent.action.MEDIA_UNMOUNTED
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:82:13-90:29
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:86:13-94:29
 action#android.intent.action.EXTERNAL_APPLICATIONS_AVAILABLE
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:83:17-96
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:87:17-96
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:83:25-93
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:87:25-93
 action#android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:84:17-98
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:88:17-98
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:84:25-95
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:88:25-95
 action#android.intent.ACTION_MEDIA_BAD_REMOVAL
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:85:17-82
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:89:17-82
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:85:25-79
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:89:25-79
 action#android.intent.action.MEDIA_REMOVED
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:86:17-78
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:90:17-78
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:86:25-75
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:90:25-75
 action#android.intent.action.ACTION_MEDIA_SHARED
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:87:17-84
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:91:17-84
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:87:25-81
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:91:25-81
 action#android.intent.action.MEDIA_UNMOUNTED
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:88:17-80
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:92:17-80
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:88:25-77
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:92:25-77
 action#android.intent.action.MEDIA_MOUNTED
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:89:17-78
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:93:17-78
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:89:25-75
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:93:25-75
 activity#com.serveme.savemyphone.view.MainActivity
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:94:9-106:20
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:98:9-110:20
 	android:label
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:96:13-45
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:100:13-45
 	android:uiOptions
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:97:13-57
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:101:13-57
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:95:13-69
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:99:13-69
 meta-data#android.support.UI_OPTIONS
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:98:13-100:60
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:102:13-104:60
 	android:value
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:100:17-57
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:104:17-57
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:99:17-58
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:103:17-58
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:102:13-105:29
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:106:13-109:29
 action#android.intent.action.MAIN
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:103:17-69
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:107:17-69
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:103:25-66
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:107:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:104:17-77
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:108:17-77
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:104:27-74
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:108:27-74
 activity#com.serveme.savemyphone.view.BackGroundActivity
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:107:9-110:20
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:111:9-114:20
 	android:label
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:109:13-45
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:113:13-45
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:108:13-75
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:112:13-75
 activity#com.serveme.savemyphone.view.UserActivity
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:111:9-116:20
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:115:9-120:20
 	android:label
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:113:13-41
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:117:13-41
 	android:launchMode
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:114:13-44
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:118:13-44
 	android:theme
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:115:13-48
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:119:13-48
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:112:13-69
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:116:13-69
 activity#com.serveme.savemyphone.view.wizard.AdminRequest
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:117:9-119:61
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:121:9-123:61
 	android:label
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:119:13-58
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:123:13-58
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:118:13-76
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:122:13-76
 activity#com.serveme.savemyphone.view.wizard.PasswordRequest
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:120:9-122:74
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:124:9-126:74
 	android:label
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:122:13-71
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:126:13-71
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:121:13-79
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:125:13-79
 activity#com.serveme.savemyphone.view.wizard.HelpActivity
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:123:9-125:59
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:127:9-129:59
 	android:label
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:125:13-56
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:129:13-56
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:124:13-76
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:128:13-76
 activity#com.serveme.savemyphone.view.SettingsActivity
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:126:9-128:48
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:130:9-132:48
 	android:label
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:128:13-45
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:132:13-45
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:127:13-73
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:131:13-73
 activity#com.serveme.savemyphone.view.wizard.RecoveryEmailRequest
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:129:9-131:63
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:133:9-135:63
 	android:label
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:131:13-60
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:135:13-60
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:130:13-84
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:134:13-84
 activity#com.serveme.savemyphone.view.RecoveryActivity
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:132:9-135:64
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:136:9-139:64
 	android:label
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:134:13-60
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:138:13-60
 	android:windowSoftInputMode
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:135:13-61
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:139:13-61
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:133:13-73
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:137:13-73
 activity#com.haibison.android.lockpattern.LockPatternActivity
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:138:9-142:62
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:142:9-146:62
 	android:screenOrientation
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:141:13-45
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:145:13-45
 	android:configChanges
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:140:13-83
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:144:13-83
 	android:theme
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:142:13-59
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:146:13-59
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:139:13-80
-service#com.google.analytics.tracking.android.CampaignTrackingService
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:144:9-97
-	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:144:18-94
-receiver#com.google.analytics.tracking.android.CampaignTrackingReceiver
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:147:9-153:20
-	android:exported
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:149:13-36
-	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:148:13-90
-intent-filter#action:name:com.android.vending.INSTALL_REFERRER
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:150:13-152:29
-action#com.android.vending.INSTALL_REFERRER
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:151:17-79
-	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:151:25-76
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:143:13-80
 activity#com.google.android.gms.ads.AdActivity
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:159:9-162:53
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:163:9-166:53
 MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/3cb029a0550ca0545aa2750c7317b6d0/jetified-play-services-ads-lite-12.0.1/AndroidManifest.xml:29:9-33:64
 MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/3cb029a0550ca0545aa2750c7317b6d0/jetified-play-services-ads-lite-12.0.1/AndroidManifest.xml:29:9-33:64
 	android:exported
 		ADDED from [com.google.android.gms:play-services-ads-lite:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/3cb029a0550ca0545aa2750c7317b6d0/jetified-play-services-ads-lite-12.0.1/AndroidManifest.xml:32:13-37
 	android:configChanges
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:161:13-122
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:165:13-122
 		REJECTED from [com.google.android.gms:play-services-ads-lite:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/3cb029a0550ca0545aa2750c7317b6d0/jetified-play-services-ads-lite-12.0.1/AndroidManifest.xml:31:13-122
 	android:theme
 		ADDED from [com.google.android.gms:play-services-ads-lite:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/3cb029a0550ca0545aa2750c7317b6d0/jetified-play-services-ads-lite-12.0.1/AndroidManifest.xml:33:13-61
 	tools:replace
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:162:13-50
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:166:13-50
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:160:13-65
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:164:13-65
 activity#com.noqoush.adfalcon.android.sdk.ADFBrowser
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:165:9-167:125
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:169:9-171:125
 	android:configChanges
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:167:13-122
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:171:13-122
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:166:13-71
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:170:13-71
 activity#com.noqoush.adfalcon.android.sdk.ADFActivity
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:168:9-172:20
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:172:9-176:20
 	android:configChanges
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:170:13-122
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:174:13-122
 	android:theme
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:171:13-83
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:175:13-83
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:169:13-72
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:173:13-72
 activity#com.noqoush.adfalcon.android.sdk.ADFCanvas
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:173:9-177:20
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:177:9-181:20
 	android:configChanges
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:175:13-122
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:179:13-122
 	android:theme
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:176:13-72
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:180:13-72
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:174:13-70
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:178:13-70
 activity#com.serveme.savemyphone.view.UnlockSettingsActivity
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:178:9-181:20
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:182:9-185:20
 	android:label
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:180:13-48
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:184:13-48
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:179:13-79
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:183:13-79
 activity#com.serveme.savemyphone.view.UserLauncherActivity
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:182:9-191:20
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:186:9-195:20
 	android:enabled
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:184:13-36
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:188:13-36
 	android:label
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:185:13-65
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:189:13-65
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:183:13-77
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:187:13-77
 activity#com.serveme.savemyphone.view.BaseActivity
-ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:192:9-195:20
-	android:theme
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:194:13-60
-	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:193:13-69
-activity#com.serveme.savemyphone.view.WaitingActivity
 ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:196:9-199:20
 	android:theme
 		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:198:13-60
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:197:13-72
-activity#com.serveme.savemyphone.view.ManageSpaceActivity
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:197:13-69
+activity#com.serveme.savemyphone.view.WaitingActivity
 ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:200:9-203:20
-	android:label
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:202:13-61
+	android:theme
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:202:13-60
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:201:13-76
-activity#com.serveme.savemyphone.view.AppsLogActivity
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:201:13-72
+activity#com.serveme.savemyphone.view.ManageSpaceActivity
 ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:204:9-207:20
 	android:label
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:206:13-60
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:206:13-61
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:205:13-72
-activity#com.serveme.savemyphone.view.SessionLogActivity
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:205:13-76
+activity#com.serveme.savemyphone.view.AppsLogActivity
 ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:208:9-211:20
 	android:label
 		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:210:13-60
 	android:name
-		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:209:13-75
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:209:13-72
+activity#com.serveme.savemyphone.view.SessionLogActivity
+ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:212:9-215:20
+	android:label
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:214:13-60
+	android:name
+		ADDED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:213:13-75
 uses-sdk
 INJECTED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml
@@ -1067,11 +1061,11 @@ ADDED from [com.google.android.gms:play-services-cast-framework:12.0.1] /Users/m
 	android:name
 		ADDED from [com.google.android.gms:play-services-cast-framework:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/c92e97746668c7a063abbdff8aa76fbb/jetified-play-services-cast-framework-12.0.1/AndroidManifest.xml:11:18-90
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-IMPLIED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:2:1-214:12 reason: org.lucasr.twowayview has a targetSdkVersion < 4
+IMPLIED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:2:1-218:12 reason: org.lucasr.twowayview has a targetSdkVersion < 4
 uses-permission#android.permission.READ_PHONE_STATE
-IMPLIED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:2:1-214:12 reason: org.lucasr.twowayview has a targetSdkVersion < 4
+IMPLIED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:2:1-218:12 reason: org.lucasr.twowayview has a targetSdkVersion < 4
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:2:1-214:12 reason: org.lucasr.twowayview requested WRITE_EXTERNAL_STORAGE
+IMPLIED from /Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/AndroidManifest.xml:2:1-218:12 reason: org.lucasr.twowayview requested WRITE_EXTERNAL_STORAGE
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [com.google.android.gms:play-services-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/e2fc77f354c5bffe6d731e70ff4da88e/jetified-play-services-analytics-12.0.1/AndroidManifest.xml:27:5-68
 MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/8f3a48348cdc8cf2e330ddca03aa0dac/jetified-play-services-analytics-impl-12.0.1/AndroidManifest.xml:27:5-68
@@ -1244,6 +1238,12 @@ ADDED from [com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradl
 		ADDED from [com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:37:13-69
 	android:name
 		ADDED from [com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:34:13-100
+intent-filter#action:name:com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:38:13-40:29
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:39:17-79
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:39:25-76
 service#com.google.android.gms.measurement.AppMeasurementService
 ADDED from [com.google.firebase:firebase-analytics:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/a614a975440bed7ab3971ae0dc26df70/jetified-firebase-analytics-12.0.1/AndroidManifest.xml:43:9-46:40
 MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] /Users/macbook/.gradle/caches/transforms-2/files-2.1/0fe08b8512a0e23393868bca2ad7f38b/jetified-firebase-analytics-impl-12.0.1/AndroidManifest.xml:34:9-37:40

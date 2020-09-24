@@ -13,7 +13,9 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.database.DataSetObserver;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -25,6 +27,7 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.serveme.savemyphone.R;
+import com.serveme.savemyphone.service.AppsMonitor;
 import com.serveme.savemyphone.view.BaseActivity;
 import com.serveme.savemyphone.control.GridAdapter;
 import com.serveme.savemyphone.model.DBOperations;
@@ -33,165 +36,169 @@ import com.serveme.savemyphone.util.MyTracker;
 
 public class UserView extends FrameLayout {
 
-	private List<Launcher> appsinfolist;
-	private DBOperations db;
-	private GridAdapter ga;
-	private GridView gridView;
-	private Launcher[] launchers;
-	private List<Launcher> currentLaunchers = new ArrayList<Launcher>();
+    private List<Launcher> appsinfolist;
+    private DBOperations db;
+    private GridAdapter ga;
+    private GridView gridView;
+    private Launcher[] launchers;
+    private List<Launcher> currentLaunchers = new ArrayList<>();
 
-	DataSetObserver dataSetObserver = new DataSetObserver() {
-		@Override
-		public void onChanged() {
-			super.onChanged();
-			if (ga != null) {
-				appsinfolist.clear();
-				appsinfolist.addAll(db.getWhiteListApps());
-				ga.notifyDataSetChanged();
-			}
-		}
+    DataSetObserver dataSetObserver = new DataSetObserver() {
+        @Override
+        public void onChanged() {
+            super.onChanged();
+            if (ga != null) {
+                appsinfolist.clear();
+                appsinfolist.addAll(db.getWhiteListApps());
+                ga.notifyDataSetChanged();
+            }
+        }
 
-		public void onInvalidated() {
-			super.onInvalidated();
-			if (ga != null) {
-				appsinfolist.clear();
-				appsinfolist.addAll(db.getWhiteListApps());
-				ga.notifyDataSetInvalidated();
-			}
+        public void onInvalidated() {
+            super.onInvalidated();
+            if (ga != null) {
+                appsinfolist.clear();
+                appsinfolist.addAll(db.getWhiteListApps());
+                ga.notifyDataSetInvalidated();
+            }
 
-		}
-	};
+        }
+    };
 
-	public UserView(Context context) {
-		super(context);
-		intialize();
-	}
+    public UserView(Context context) {
+        super(context);
+        intialize();
+    }
 
-	public UserView(Context context, AttributeSet attrs) {
-		super(context, attrs);
-		intialize();
-	}
+    public UserView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        intialize();
+    }
 
-	public UserView(Context context, AttributeSet attrs, int defStyleAttr) {
-		super(context, attrs, defStyleAttr);
-		intialize();
-	}
+    public UserView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        intialize();
+    }
 
-	public void intialize() {
-		LayoutInflater inflater = LayoutInflater.from(getContext());
-		View view = inflater.inflate(R.layout.user_activity, this, true);
-		db = DBOperations.getInstance(getContext());
-		appsinfolist = new ArrayList<Launcher>();
-		gridView = (GridView) view.findViewById(R.id.grid_view);
-		appsinfolist.addAll(db.getWhiteListApps());
-		ga = new GridAdapter(getContext(), appsinfolist);
-		gridView.setAdapter(ga);
-		gridView.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);
-		gridView.setNumColumns(GridView.AUTO_FIT);
+    public void intialize() {
+        LayoutInflater inflater = LayoutInflater.from(getContext());
+        View view = inflater.inflate(R.layout.user_activity, this, true);
+        db = DBOperations.getInstance(getContext());
+        appsinfolist = new ArrayList<>();
+        gridView = (GridView) view.findViewById(R.id.grid_view);
+        appsinfolist.addAll(db.getWhiteListApps());
+        ga = new GridAdapter(getContext(), appsinfolist);
+        gridView.setAdapter(ga);
+        gridView.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);
+        gridView.setNumColumns(GridView.AUTO_FIT);
+        Log.d("onItemClick", "onItemClick: " + inflater);
 
-		gridView.setOnItemClickListener(new OnItemClickListener() {
-			@Override
-			public void onItemClick(AdapterView<?> parent, View v,
-					int position, long id) {
-				Launcher launcher = appsinfolist.get(position);
-				try {
-					Intent i = new Intent(getContext(), BaseActivity.class);
-					i.putExtra("package", launcher.getPackageName());
-					i.putExtra("activity", launcher.getActivity());
-					i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
-							| Intent.FLAG_ACTIVITY_CLEAR_TOP);
-					getContext().startActivity(i);
-					MyTracker.fireButtonPressedEvent(getContext(), "run_app");
-				} catch (ActivityNotFoundException e) {
-					Toast.makeText(getContext(), "Application not Installed",
-							Toast.LENGTH_LONG).show();
-					db.deleteLauncher(launcher);
-				}
-			}
-		});
+        gridView.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                Launcher launcher = appsinfolist.get(position);
+                try {
+                    Log.d("onItemClick", "onItemClick: " + launcher.getPackageName());
 
-		final ImageButton unlock = (ImageButton) view.findViewById(R.id.unlock);
+                    Intent i = new Intent(getContext(), BaseActivity.class);
+                    i.putExtra("package", launcher.getPackageName());
+                    i.putExtra("activity", launcher.getActivity());
+                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
+                            | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    getContext().startActivity(i);
 
-		unlock.setOnClickListener(new OnClickListener() {
+                    MyTracker.fireButtonPressedEvent(getContext(), "run_app");
+                } catch (ActivityNotFoundException e) {
+                    Toast.makeText(getContext(), "Application not Installed",
+                            Toast.LENGTH_LONG).show();
+                    db.deleteLauncher(launcher);
+                }
+            }
+        });
 
-			@Override
-			public void onClick(View v) {
-				Intent userActivityIntent = new Intent(getContext(), UserActivity.class);
-				userActivityIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-				getContext().startActivity(userActivityIntent);
-			}
-		});
-	}
+        final ImageButton unlock = view.findViewById(R.id.unlock);
 
-	@Override
-	protected void onAttachedToWindow() {
-		super.onAttachedToWindow();
-		appsinfolist.clear();
-		appsinfolist.addAll(db.getWhiteListApps());
-		db.registerObserver(dataSetObserver);
-		currentLaunchers.clear();
-		final ImageButton unlock = (ImageButton) findViewById(R.id.unlock);
-		SharedPreferences preferences = getContext().getSharedPreferences(
-				"mypref", Context.MODE_PRIVATE);
-		boolean hiddenLock = preferences
-				.getBoolean("hidden_lock_active", false);
-		if (hiddenLock) {
-			unlock.setVisibility(View.GONE);
-			launchers = new Gson().fromJson(
-					preferences.getString("hidden_lock", null),
-					new GenericArrayType() {
+        unlock.setOnClickListener(new OnClickListener() {
 
-						@Override
-						public Type getGenericComponentType() {
+            @Override
+            public void onClick(View v) {
+                Intent userActivityIntent = new Intent(getContext(), UserActivity.class);
+                userActivityIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                getContext().startActivity(userActivityIntent);
+            }
+        });
+    }
 
-							return Launcher.class;
-						}
-					});
-			gridView.setOnItemLongClickListener(new OnItemLongClickListener() {
+    @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        appsinfolist.clear();
+        appsinfolist.addAll(db.getWhiteListApps());
 
-				@Override
-				public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
-						int position, long arg3) {
-					currentLaunchers.add(appsinfolist.get(position));
-					if (currentLaunchers.size() <= launchers.length) {
-						for (int i = 0; i < currentLaunchers.size(); i++) {
-							if (!launchers[i].equals(currentLaunchers.get(i))) {
-								return true;
-							}
-						}
-					}else{
-						return true;
-					}
-					if (currentLaunchers.size() == launchers.length) {
-						unlock.setVisibility(View.VISIBLE);
-					}
-					return true;
-				}
-			});
-		} else {
-			unlock.setVisibility(View.VISIBLE);
-			gridView.setOnItemLongClickListener(null);
-		}
-		ga.notifyDataSetInvalidated();
-		MyTracker.setUncaughtExceptionHandler(getContext());
-		// ����� ������� �� ��� ����� ��� SDCard
-		getContext().registerReceiver(refreshList,
-				new IntentFilter("refresh_white_list"));
-	}
+        db.registerObserver(dataSetObserver);
+        currentLaunchers.clear();
+        final ImageButton unlock = findViewById(R.id.unlock);
+        SharedPreferences preferences = getContext().getSharedPreferences(
+                "mypref", Context.MODE_PRIVATE);
+        boolean hiddenLock = preferences
+                .getBoolean("hidden_lock_active", false);
+        if (hiddenLock) {
+            unlock.setVisibility(View.GONE);
+            launchers = new Gson().fromJson(
+                    preferences.getString("hidden_lock", null),
+                    new GenericArrayType() {
 
-	@Override
-	protected void onDetachedFromWindow() {
-		super.onDetachedFromWindow();
-		getContext().unregisterReceiver(refreshList);
-		db.unregisterObserver(dataSetObserver);
-	}
+                        @Override
+                        public Type getGenericComponentType() {
 
-	private final BroadcastReceiver refreshList = new BroadcastReceiver() {
-		@Override
-		public void onReceive(Context context, Intent intent) {
-			appsinfolist.clear();
-			appsinfolist.addAll(db.getWhiteListApps());
-			ga.notifyDataSetInvalidated();
-		}
-	};
+                            return Launcher.class;
+                        }
+                    });
+            gridView.setOnItemLongClickListener(new OnItemLongClickListener() {
+
+                @Override
+                public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+                                               int position, long arg3) {
+                    currentLaunchers.add(appsinfolist.get(position));
+                    if (currentLaunchers.size() <= launchers.length) {
+                        for (int i = 0; i < currentLaunchers.size(); i++) {
+                            if (!launchers[i].equals(currentLaunchers.get(i))) {
+                                return true;
+                            }
+                        }
+                    } else {
+                        return true;
+                    }
+                    if (currentLaunchers.size() == launchers.length) {
+                        unlock.setVisibility(View.VISIBLE);
+                    }
+                    return true;
+                }
+            });
+        } else {
+            unlock.setVisibility(View.VISIBLE);
+            gridView.setOnItemLongClickListener(null);
+        }
+        ga.notifyDataSetInvalidated();
+        MyTracker.setUncaughtExceptionHandler(getContext());
+        // ����� ������� �� ��� ����� ��� SDCard
+        getContext().registerReceiver(refreshList,
+                new IntentFilter("refresh_white_list"));
+    }
+
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        getContext().unregisterReceiver(refreshList);
+        db.unregisterObserver(dataSetObserver);
+    }
+
+    private final BroadcastReceiver refreshList = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            appsinfolist.clear();
+            appsinfolist.addAll(db.getWhiteListApps());
+            ga.notifyDataSetInvalidated();
+        }
+    };
 }

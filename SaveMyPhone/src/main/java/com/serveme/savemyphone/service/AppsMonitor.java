@@ -10,25 +10,20 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
+import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 
-import com.google.analytics.tracking.android.EasyTracker;
-import com.google.analytics.tracking.android.MapBuilder;
-import com.google.analytics.tracking.android.Tracker;
 import com.serveme.savemyphone.model.DBOperations;
 import com.serveme.savemyphone.model.Launcher;
 import com.serveme.savemyphone.view.BaseActivity;
 import com.serveme.savemyphone.view.utils.AlertUtility;
-import com.serveme.savemyphone.view.utils.AnalyticsExceptionParser;
 
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
-
-//import android.widget.Toast;
 
 public class AppsMonitor extends Service {
     private static final int UPDATE_INTERVAL = 39;
@@ -70,12 +65,10 @@ public class AppsMonitor extends Service {
         final WindowManager.LayoutParams param = AlertUtility.getParam();
         final View view = AlertUtility.getView(AppsMonitor.this);
         serviceUtils = new ServiceUtils(AppsMonitor.this, am);
-        handler = new Handler() {
-            // Toast toast = Toast.makeText(AppsMonitor.this,
-            // R.string.prevent_message, Toast.LENGTH_LONG);
 
+        handler = new Handler(Looper.getMainLooper()) {
             @Override
-            public void handleMessage(Message msg) {
+            public void handleMessage(@androidx.annotation.NonNull Message msg) {
                 final WindowManager wmgr = (WindowManager) getApplicationContext()
                         .getSystemService(Context.WINDOW_SERVICE);
                 if (!stopped) {
@@ -86,6 +79,7 @@ public class AppsMonitor extends Service {
                                 try {
                                     wmgr.addView(view, param);
                                 } catch (Exception e) {
+                                    e.printStackTrace();
 
 //                                    Tracker tracker = EasyTracker
 //                                            .getInstance(AppsMonitor.this);
@@ -112,7 +106,8 @@ public class AppsMonitor extends Service {
                                 try {
                                     wmgr.removeView(view);
                                 } catch (Exception e) {
- //                                    Tracker tracker = EasyTracker
+                                    e.printStackTrace();
+                                    //                                    Tracker tracker = EasyTracker
 //                                            .getInstance(AppsMonitor.this);
 //                                    tracker.send(MapBuilder.createException(
 //                                            new AnalyticsExceptionParser()
@@ -129,6 +124,7 @@ public class AppsMonitor extends Service {
                             }
                         }
                     } else if (msg.what == 2) {
+                        Log.d("handleMessage", "handleMessage: " + msg.getData());
                         Bundle bundle = msg.getData();
                         String packageName = bundle.getString("packageName");
                         long startTime = bundle.getLong("startTime");
@@ -177,7 +173,7 @@ public class AppsMonitor extends Service {
         final View view = AlertUtility.getView(AppsMonitor.this);
         handler.removeMessages(0);
         handler.removeMessages(1);
-        // ����� ������ �������� ����� ��� ���� �����
+
         final WindowManager wmgr = (WindowManager) getApplicationContext()
                 .getSystemService(Context.WINDOW_SERVICE);
         synchronized (view) {
@@ -190,10 +186,11 @@ public class AppsMonitor extends Service {
     }
 
     private void preventAppFromRunning(View view) {
+        Log.d("preventAppFromRunning", "preventAppFromRunning: " +view);
         List<ActivityManager.RunningTaskInfo> taskInfo = am.getRunningTasks(1);
         ComponentName topActivity = taskInfo.get(0).topActivity;
-        ComponentName baseActivity = taskInfo.get(0).baseActivity;// ��������
-        // ������
+        ComponentName baseActivity = taskInfo.get(0).baseActivity;
+
         Launcher launcher = new Launcher(topActivity.getPackageName(),
                 null);
 
@@ -221,8 +218,8 @@ public class AppsMonitor extends Service {
             // am.killBackgroundProcesses(componentInfo.getPackageName());
             /*
              * componentInfo = taskInfo.get(0).baseActivity; launcher =
-			 * new Launcher( componentInfo.getPackageName(), null);
-			 */
+             * new Launcher( componentInfo.getPackageName(), null);
+             */
 
             launcher = new Launcher(baseActivity.getPackageName(), null);
             if (db.getWhiteListPackages().contains(launcher)) {
@@ -348,10 +345,10 @@ public class AppsMonitor extends Service {
                     // }
                     // }
                     // am.killBackgroundProcesses(componentInfo.getPackageName());
-            /*
-             * componentInfo = taskInfo.get(0).baseActivity; launcher =
-			 * new Launcher( componentInfo.getPackageName(), null);
-			 */
+                    /*
+                     * componentInfo = taskInfo.get(0).baseActivity; launcher =
+                     * new Launcher( componentInfo.getPackageName(), null);
+                     */
                     // Log.d("test", "test");
                     synchronized (view) {
                         if (currentState == MobileState.START_ALERT_MESSAGE) {
