@@ -15,9 +15,9 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 
-//import com.google.analytics.tracking.android.EasyTracker;
-//import com.google.analytics.tracking.android.MapBuilder;
-//import com.google.analytics.tracking.android.Tracker;
+import com.google.analytics.tracking.android.EasyTracker;
+import com.google.analytics.tracking.android.MapBuilder;
+import com.google.analytics.tracking.android.Tracker;
 import com.serveme.savemyphone.model.DBOperations;
 import com.serveme.savemyphone.model.Launcher;
 import com.serveme.savemyphone.view.BaseActivity;
@@ -86,6 +86,7 @@ public class AppsMonitor extends Service {
                                 try {
                                     wmgr.addView(view, param);
                                 } catch (Exception e) {
+
 //                                    Tracker tracker = EasyTracker
 //                                            .getInstance(AppsMonitor.this);
 //                                    tracker.send(MapBuilder.createException(
@@ -98,6 +99,7 @@ public class AppsMonitor extends Service {
 //                                                            + " "
 //                                                            + currentState, e),
 //                                            false).build());
+
                                 }
                                 // toast.show();
                                 setCurrentState(MobileState.START_ALERT_MESSAGE);
@@ -110,7 +112,7 @@ public class AppsMonitor extends Service {
                                 try {
                                     wmgr.removeView(view);
                                 } catch (Exception e) {
-//                                    Tracker tracker = EasyTracker
+ //                                    Tracker tracker = EasyTracker
 //                                            .getInstance(AppsMonitor.this);
 //                                    tracker.send(MapBuilder.createException(
 //                                            new AnalyticsExceptionParser()
@@ -122,6 +124,7 @@ public class AppsMonitor extends Service {
 //                                                            + " "
 //                                                            + currentState, e),
 //                                            false).build());
+
                                 }
                             }
                         }
