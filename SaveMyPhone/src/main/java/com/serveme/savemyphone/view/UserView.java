@@ -91,7 +91,6 @@ public class UserView extends FrameLayout {
         gridView.setAdapter(ga);
         gridView.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);
         gridView.setNumColumns(GridView.AUTO_FIT);
-        Log.d("onItemClick", "onItemClick: " + inflater);
 
         gridView.setOnItemClickListener(new OnItemClickListener() {
             @Override

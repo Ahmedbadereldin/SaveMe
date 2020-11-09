@@ -1,6 +1,5 @@
 package com.serveme.savemyphone.view;
 
-//import org.omar.android.lib.ui.passwordlock.PasswordEntryActivity;
 
 import org.codechimp.apprater.AppRater;
 

@@ -8,6 +8,7 @@ import android.app.ActivityManager.RunningAppProcessInfo;
 import android.app.ActivityManager.RunningServiceInfo;
 import android.content.ComponentName;
 import android.content.Context;
+import android.util.Log;
 
 public class ServiceUtils {
 
@@ -19,7 +20,10 @@ public class ServiceUtils {
 		this.mActivityManager = activityManager;
 	}
 
+	//just for Lollipop
 	public boolean isRunningService(String processname) {
+		Log.d("isRunningService", "isRunningService: "+processname);
+
 		if (processname == null || processname.isEmpty()) {
 			return false;
 		}
@@ -34,8 +38,11 @@ public class ServiceUtils {
 		List<RunningServiceInfo> list = mActivityManager
 				.getRunningServices(Integer.MAX_VALUE);
 		Iterator<RunningServiceInfo> i = list.iterator();
+		Log.d("isRunningService", "isRunningService: "+i);
+
 		while (i.hasNext()) {
 			service = i.next();
+			Log.d("isRunningService", "isRunningService: "+service);
 			if (service.process.equals(processname))
 				return true;
 		}

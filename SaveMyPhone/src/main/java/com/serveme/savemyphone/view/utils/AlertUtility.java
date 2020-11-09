@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.graphics.PixelFormat;
 import android.os.Build;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.view.WindowManager;
@@ -24,21 +25,42 @@ public class AlertUtility {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             layout_parms = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
-
         } else {
             layout_parms = WindowManager.LayoutParams.TYPE_PHONE;
-//            layout_parms = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
         }
 
 
+//        param = new WindowManager.LayoutParams(
+//                WindowManager.LayoutParams.WRAP_CONTENT,
+//                WindowManager.LayoutParams.WRAP_CONTENT,
+//                layout_parms,
+//                WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH | WindowManager.LayoutParams.FLAG_SHOW_WALLPAPER,
+//                PixelFormat.TRANSLUCENT);
+
+        // WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH | WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
         param = new WindowManager.LayoutParams(
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 layout_parms,
-                WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH | WindowManager.LayoutParams.FLAG_SHOW_WALLPAPER,
+                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH | WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS| WindowManager.LayoutParams.FLAG_SHOW_WALLPAPER,
                 PixelFormat.TRANSLUCENT);
 
-          return param;
+        param.gravity = Gravity.TOP;
+
+        return param;
+    }
+
+    public static WindowManager.LayoutParams stopParam() {
+        final WindowManager.LayoutParams param;
+
+        param = new WindowManager.LayoutParams(
+                WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.TYPE_APPLICATION,
+                0,
+                PixelFormat.TRANSLUCENT);
+
+        return param;
     }
 
     public synchronized static View getView(Context context) {

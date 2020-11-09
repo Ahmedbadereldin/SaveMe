@@ -52,12 +52,12 @@
         "source": "/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/res/drawable-mdpi/settings.png"
     },
     {
-        "merged": "/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/build/intermediates/res/merged/debug/drawable-hdpi_ic_launcher.png.flat",
-        "source": "/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/res/drawable-hdpi/ic_launcher.png"
-    },
-    {
         "merged": "/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/build/intermediates/res/merged/debug/layout_activity_user_launcher.xml.flat",
         "source": "/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/res/layout/activity_user_launcher.xml"
+    },
+    {
+        "merged": "/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/build/intermediates/res/merged/debug/drawable-hdpi_ic_launcher.png.flat",
+        "source": "/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/src/main/res/drawable-hdpi/ic_launcher.png"
     },
     {
         "merged": "/Volumes/My Computer/Private for work/Android Developer/open source project/ alimoor/SaveMe/SaveMyPhone/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_launcher.png.flat",

@@ -1,7 +1,6 @@
 package com.serveme.savemyphone.view;
 
 import com.serveme.savemyphone.R;
-
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -16,13 +15,12 @@ public class BaseActivity extends Activity {
 	private boolean isStart;
 
 	private BroadcastReceiver stopBaseActivity = new BroadcastReceiver() {
-
 		@Override
 		public void onReceive(Context context, Intent intent) {
 			finish();
 		}
-
 	};
+
 
 	protected void onNewIntent(Intent start) {
 		String packageName = start.getStringExtra("package");
@@ -37,6 +35,7 @@ public class BaseActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_base);
+
 		Intent start = getIntent();
 		if (start == null) {
 			return;
@@ -58,7 +57,7 @@ public class BaseActivity extends Activity {
 			i.putExtra("activity", activity);
 			startActivity(i);
 			isStart = true;
-		}
+ 		}
 	}
 
 	@Override
@@ -75,7 +74,7 @@ public class BaseActivity extends Activity {
 	}
 
 	@Override
-	protected void onRestoreInstanceState(Bundle savedInstanceState) {
+	protected void onRestoreInstanceState(@androidx.annotation.NonNull Bundle savedInstanceState) {
 		super.onRestoreInstanceState(savedInstanceState);
 		isStart = savedInstanceState.getBoolean("isStart");
 		packageName = savedInstanceState.getString("packageName");

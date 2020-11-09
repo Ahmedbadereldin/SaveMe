@@ -60,8 +60,7 @@ public class AppsMonitor extends Service {
         db = DBOperations.getInstance(this);
         sessionId = db.createAppLogSession(System.currentTimeMillis());
         am = (ActivityManager) this.getSystemService(ACTIVITY_SERVICE);
-        // view = LayoutInflater.from(AppsMonitor.this).inflate(
-        // R.layout.password_request, null);
+
         final WindowManager.LayoutParams param = AlertUtility.getParam();
         final View view = AlertUtility.getView(AppsMonitor.this);
         serviceUtils = new ServiceUtils(AppsMonitor.this, am);
@@ -71,6 +70,7 @@ public class AppsMonitor extends Service {
             public void handleMessage(@androidx.annotation.NonNull Message msg) {
                 final WindowManager wmgr = (WindowManager) getApplicationContext()
                         .getSystemService(Context.WINDOW_SERVICE);
+
                 if (!stopped) {
                     if (msg.what == 0) {
                         synchronized (view) {
@@ -80,22 +80,7 @@ public class AppsMonitor extends Service {
                                     wmgr.addView(view, param);
                                 } catch (Exception e) {
                                     e.printStackTrace();
-
-//                                    Tracker tracker = EasyTracker
-//                                            .getInstance(AppsMonitor.this);
-//                                    tracker.send(MapBuilder.createException(
-//                                            new AnalyticsExceptionParser()
-//                                                    .getDescription(Thread
-//                                                            .currentThread()
-//                                                            .toString()
-//                                                            + " "
-//                                                            + previousState
-//                                                            + " "
-//                                                            + currentState, e),
-//                                            false).build());
-
                                 }
-                                // toast.show();
                                 setCurrentState(MobileState.START_ALERT_MESSAGE);
                             }
                         }
@@ -186,13 +171,12 @@ public class AppsMonitor extends Service {
     }
 
     private void preventAppFromRunning(View view) {
-        Log.d("preventAppFromRunning", "preventAppFromRunning: " +view);
         List<ActivityManager.RunningTaskInfo> taskInfo = am.getRunningTasks(1);
         ComponentName topActivity = taskInfo.get(0).topActivity;
         ComponentName baseActivity = taskInfo.get(0).baseActivity;
 
-        Launcher launcher = new Launcher(topActivity.getPackageName(),
-                null);
+        Launcher launcher = new Launcher(topActivity.getPackageName(), null);
+
 
         if (!db.getWhiteListPackages().contains(launcher)
                 && !topActivity.getPackageName().equals("android")
@@ -259,6 +243,8 @@ public class AppsMonitor extends Service {
             }
             //
         } else if (topActivity.getPackageName().equals("android")) {
+            Log.d("preventAppFromRunning", "preventAppFromRunning: " +"11111");
+
             // lastallowedapp = taskInfo.get(0).topActivity;
             synchronized (view) {
                 if (currentState != MobileState.START_ALERT_MESSAGE) {
@@ -269,6 +255,8 @@ public class AppsMonitor extends Service {
             }
         } else if (topActivity.getClassName().equals(
                 "com.serveme.savemyphone.view.UserActivity")) {
+            Log.d("preventAppFromRunning", "preventAppFromRunning: " +"22222");
+
             synchronized (view) {
                 if (currentState == MobileState.START_ALERT_MESSAGE) {
                     handler.sendEmptyMessage(1);
@@ -277,6 +265,9 @@ public class AppsMonitor extends Service {
                 }
             }
         } else {
+            Log.d("preventAppFromRunning", "preventAppFromRunning: " +"333333");
+            Log.d("preventAppFromRunning", "preventAppFromRunning:333333"+currentApp);
+
             synchronized (view) {
                 if (currentState != MobileState.START_ALERT_MESSAGE) {
                     setCurrentState(MobileState.ALLOW_APP);
@@ -323,6 +314,8 @@ public class AppsMonitor extends Service {
         List<RunningAppProcessInfo> runningAppProcesses = am.getRunningAppProcesses();
 
         List<ActivityManager.RunningAppProcessInfo> processes = am.getRunningAppProcesses();
+        Log.d("isRunningService", "isRunningService: "+processes);
+
         for (ActivityManager.RunningAppProcessInfo process : processes) {
             // Take a look at the IMPORTANCE_VISIBLE property as well in the link provided at the bottom
             if (process.importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND && !serviceUtils.isRunningService(process.processName)) {
@@ -414,6 +407,5 @@ public class AppsMonitor extends Service {
             }
         }
     }
-
 
 }
